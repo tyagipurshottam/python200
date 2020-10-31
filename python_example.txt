@@ -1,0 +1,3440 @@
+
+#everything in python is object number is diffrent data type and text is diffrent data type
+#Literal : a piece of syntax that create an object eg "purshottam"
+#string: An immutable sequence of text character
+#immutable means cannot be  capable of change (to can not change after creation)
+#muutable means it can change  afer creation.
+#string "5" this is string and 5 this is digit, ant thing b/w "" '' """ """ is string means.string eqeucce of 1 and more charater.
+#if you start '' in b/w user "" in string then wap by ''. vice-versa.
+
+
+#Function
+# Arguments(ingredients) Function(recipe) Retuurn vaule(food)
+# concatenation means print("3" + "4") result 34
+#parameter: a name for an expected agrumnet to a function
+#agrument: the acutal value passed as input to a function
+#print("ram", end="\n")
+#print("ABC", "DEF", "XYZ", end="-")
+
+#print(1 + 2, 3 + 4, 4 + 5, sep="=")
+
+#concatenation
+#print("BA"+"CD")
+#print("BS"*32)
+
+#use operators //
+#print(14 / 3) #4,6666666
+#print(14 // 3) #4
+
+#boolean : A data type that can be either True or False
+
+#an object is an instace of a class
+
+#vaiable : A name  assigned to an object
+"""
+season='Summer','Fall','Spring','Winter'
+print(season)
+
+a=int(input("First number: "))
+b=int(input("Second number: "))
+print("First numbet is ",a,"and second number is ",b," sum of two number is ",a+b)
+"""
+
+#a=float(input("Enter a tempature in Fahrenheit temperature: "))
+#b= a-32
+#c= b * (5/9)
+#print("The temperatue in celsius is: ",round(c,2))
+
+#Function 
+#function: A collection of 1 or more python statements,funtion is also obejct just like anything in python
+
+#def add():
+#    pass #do nothing just pass a function like s=""empty string
+#def output_test():
+#    print("Hello")
+#output_test()
+
+#def p(text):
+#    print(text)
+#p("Hello1")
+#p()
+
+#def add1(a,b):
+#    return (a+b)
+#    print("Sum of a",a ,"and b is",b,"=",a+b)
+#result = add1(2,3)
+#print(result)
+
+#def convert_to_currency(text):
+#    return "$"+str(text)
+#convert_to_currency(15)
+#print(convert_to_currency(15))
+
+#Default agruments: Fallback arguments that are passsed to a function if an expicit value is not provided for a parameter
+
+#def add(a=0,b=0):
+#    return a + b
+#print(add(3,5))
+#print(add())
+#print(add(10))
+
+#def word(a=" ",b=" "):
+#    return a+" "+b
+#print(word("Tiger"))
+
+#def word_multi(word: str,time: int) -> str:  # -> str means return vaule data type is string
+#    return word*time+"----"
+#sham=input("please enter a word: ")
+#sita=int(input("please enter how many time: "))
+#print(word_multi(sham,sita))
+
+
+#What is a function?
+#A function is a collection of 1 or more Python statements. It is an organized chunk of code that can be reused throughout a program.
+#Tell me a little about parameters, arguments, and return values.
+#A parameter is a name for an expected input to a function. The argument is the actual value passed in for a parameter. A return value is the output of a function.
+#What is a default argument? How do you define one?
+#A default argument is a fallback value that will be passed to a parameter if an argument is not passed during function invocation.
+#What data type represents nothingness or nonexistence or emptiness?
+#None
+#What is the difference between positional arguments and keyword arguments?
+#A positional argument is passed to a function by sequence (the order of expected arguments). A keyword argument is passed to a function by a keyword identifier.
+
+
+# Define a long_word function that accepts a string. 
+# The function should return a Boolean that reflects whether the string has more than 7 characters.
+# 
+# EXAMPLES:
+# long_word("Python")         => False
+# long_word("magnificent")    => True
+
+#def long_word(text: str) -> bool:
+#    return (len(text)> 7)
+#print(long_word("purshottam"))
+
+
+# Define a first_longer_than_second function that accepts two string arguments. 
+# The function should return a True if the first string is longer than the second 
+# and False otherwise (including if they are equal in length).
+#
+# EXAMPLES:
+# first_longer_than_second("Python", "Ruby")     => True
+# first_longer_than_second("cat", "mouse")       => False
+# first_longer_than_second("Steven", "Seagal")   => False
+
+#def first_longer_than_second(text1: str, text2:str) -> bool:
+#    return len(text1) > len(text2)
+#print(first_longer_than_second("Steven", "Seagal"))
+
+# Define a same_first_and_last_letter function that accepts a string as an argument. 
+# The function should return a True if the first and last character are equal, and False otherwise
+# Assume the string will always have 1 or more characters.
+#
+# EXAMPLES:
+# same_first_and_last_letter("runner")   => True
+# same_first_and_last_letter("Runner")   => False
+# same_first_and_last_letter("clock")    => False
+# same_first_and_last_letter("q")        => True
+
+#def same_first_and_last_letter(char: str) -> bool:
+#    return char[0] == char[-1] 
+#print(same_first_and_last_letter("g"))
+
+# Define a three_number_sum function that accepts a 3-character string as an argument. 
+# The function should add up the sum of the digits of the string. 
+# HINT: You’ll have to figure out a way to convert the string-ified numbers to integers.
+#
+# EXAMPLES:
+# three_number_sum("123")   => 6
+# three_number_sum("567")   => 18
+# three_number_sum("444")   => 12
+# three_number_sum("000")   => 0
+
+#def three_number_sum(a):
+#    return int(a[0]) + int(a[1]) + int(a[2])
+
+
+
+# Define a first_three_characters function that accepts a string argument.
+# The function should return the first 3 characters of the string.
+#
+# EXAMPLES:
+# first_three_characters("dynasty")   => "dyn"
+# first_three_characters("empire")    => "emp"
+
+
+#def first_three_characters(char: str):
+#    return char[0:2]
+
+# Define a last_five_characters function that accepts a string argument. 
+# The function should return the last 5 characters of the string.
+#
+# EXAMPLES:
+# last_five_characters("dynasty")   => "nasty"
+# last_five_characters("empire")    => "mpire"
+
+
+#def last_five_characters(char: str):
+#    return char[-5:]
+
+# Define a is_palindrome function that accepts a string argument. 
+# The function should return True if the string is spelled 
+# the same backwards as it is forwards. 
+# Return False otherwise.
+#
+# EXAMPLES:
+# is_palindrome("racecar")   => True
+# is_palindrome("yummy")     => False
+
+#def is_palindrome(char: str) -> bool:
+#    return bool(char[:] == char[::-1])
+
+#print(is_palindrome("purshottam"))
+
+#How can you check if the string "and" is found in the string "commando"?
+#"and" in "commando"
+#What number does the index start counting from?
+#0
+#What will the code below evaluate to?
+#"commando"[3:7]
+#"mand"
+##What will the code below evaluate to?
+#"monroeville"[6:]
+#"ville"
+#What will the code below evaluate to?
+#"destiny"[:4]
+#"dest"
+#What is the difference between ​\n​ and ​\t​?
+#The former creates a line break (new line) in the string. The latter creates a tab in the string.
+#What function calculates the number of characters in a string?
+#len()
+#What is the technical word that means “to combine strings together”?
+#concatenate
+#What will the code below evaluate to?
+#"november"[6]
+#"e"
+#What will the code below evaluate to?
+#"misfortune"[10]
+#IndexError 
+
+#method : A function that acts upon  a specific object
+
+#browser="Google Chrome"
+#print(browser.find("C"))
+#print(browser.find("Chrome"))
+#print(browser.find("Z"))#it show -1 value
+#print()
+#print(browser.find("o"))
+#print(browser.find("o",2))  
+#print(browser.index("C"))
+#print(browser.index("Z"))#ValueError: substring not found
+
+#How does the rfind method work?
+#While the find method returns the first index where a substring occurs, the rfind method returns the last index where a substring occurs. Another way to think about the method is as "right find" -- it is starting the search from the right side of a string instead of the left.
+#Provide 3 examples of the rfind method in action. Write the invocation along with the return value.
+#print("coca cola".rfind("c"))   # 5 - the 'c' in cola
+#print("catchphrase".rfind("a")) # 8 - the 'a' in phrase
+#print("jumanji".rfind("j"))     # 5 - the second 'j'
+
+#s="Mr. Purshottam Tyagi"
+#print(s.startswith("P")) # if start with P show true then it show false.Now it show false
+#print(s.startswith("M")) # it true
+#print(s.endswith("i")) # true
+#print(s.endswith("P")) #false
+#print(s.endswith("Tyagi")) #true
+
+#s="queueing"
+#print(s.count("e"))#2 it case sentive
+#print(s.count("i"))#1
+#print(s.count("Z"))# does not exit become 0
+#print(s.count("ue")) #2
+#print(s.count("ing")) #1
+
+
+
+# Define a vowel_count function that accepts a string argument.
+# The function should return the count of vowels in the string.
+# The 5 vowels are "a", "e", "i", "o", and "u".
+# You can assume the string will be in all lowercase.
+#
+# EXAMPLES:
+# vowel_count("estate")        => 3
+# vowel_count("helicopter")    => 4
+# vowel_count("ssh")           => 0
+
+#def vowel_count(a:  str) -> int:
+#    return a.count("a") + a.count("i") + a.count("o") + a.count("u") + a.count("e")
+
+#print(vowel_count("ssh"))
+
+# Define a find_my_letter function that accepts two arguments: a string and a character
+# The function should return the first index position of the character in the string
+# The function should return a -1 if the character does not exist in the string
+#
+# EXAMPLES:
+# find_my_letter("dangerous", "a")    => 1
+# find_my_letter("bazooka", "z")      => 2
+# find_my_letter("lollipop", "z")     => -1
+
+#def find_my_letter(a: str,b: str) -> int:
+#    return a.find(b)
+
+#print(find_my_letter("bazooka", "A"))
+
+#story="oNce upon a time"
+#print(story.capitalize()) # Once upon a time
+#print(story.title()) #Once Upon A Time
+#print(story.upper()) #ONCE UPON A TIME
+#print(story.lower()) #once upon a time
+#print(story.swapcase()) #OnCE UPON A TIME
+#print("PURSHOTTAM TYAGI".lower().title())#Purshottam Tyagi
+#print(story)
+#story =story.title()
+#print(story)
+
+#print("winter".islower()) #true
+#print("winter".isupper()) #false
+#print("winter $!@####".islower()) #true
+#print("WINTER".isupper()) #true
+#print("51".isnumeric()) #true
+#print("!@#$$%".isnumeric()) #false
+#print("area51".isalnum()) #true
+#print("area 51".isalnum()) #false
+#print(" ".isspace())#True
+#print("purshottam tyagi".isspace()) #false
+
+#empty_space="           is             "
+#print(len(empty_space))
+#print(empty_space.rstrip())
+#print(len(empty_space.rstrip()))
+#print(empty_space.lstrip())
+#print(len(empty_space.lstrip()))
+#print(empty_space.strip())
+#print(len(empty_space.strip()))
+#website="www.python.com"
+#print(website.lstrip("w")) #.python.com
+#print(website.rstrip(".com"))#www.python
+
+#replace method
+
+#phone="880 091 500 5"
+#print(phone.replace(" ","-")) #880-091-500-5
+#print(phone.replace("8","1"))#110 091 500 5
+
+# Define a fancy_cleanup function that accepts a single string argument
+# The function should clean up the whitespace on both sides of the
+# argument. It should also replace every occurrence of the letter "g" with the
+# letter "z" and every occurence of a space with an exclamation point (!).
+#
+# fancy_cleanup("       geronimo crikey  ")   => "zeronimo!crikey"
+# fancy_cleanup("       nonsense  ")          => "nonsense"
+# fancy_cleanup("grade")                      => "zrade"
+#def fancy_cleanup(char: str) -> str:
+#    return char.lstrip().rstrip().replace("g","z").replace(" ","!")
+
+#print(fancy_cleanup("       geronimo crikey  "))
+
+#format
+#mad_labs="{} laught at the {} {}"
+#print(mad_labs.format("purshottam","tv","show"))#purshottam laught at the tv show
+#print(mad_labs.format("purshottam","tv","show","at")) # add extra no show error but not show at like purshottam laught at the tv show
+#print(mad_labs.format("purshottam","tv")) # put value less show error: IndexError: tuple index out of range
+
+#mad_labs="{1} laught at the {2} {0}"
+#print(mad_labs.format("purshottam","tv","show")) #tv laught at the show purshottam
+
+#mad_labs="{name} laught at the {ad} {noun}"
+#print(mad_labs.format(name="purshottam", ad="tv", noun="show")) #purshottam laught at the tv show
+
+#f method
+#a="1"
+#b="2"
+#c="3"
+#mad_lab=f"{a} {b} {c} is sum of {a+b+c}" #1 2 3 is sum of 123
+#mad_lab=f"{a} {b} {c} is sum of {int(a)+int(b)+int(c)}" #1 2 3 is sum of 6 #f can be lowe case ot upper case F show same result
+#print(mad_lab)
+
+#What is a method?
+#An easy way to describe a method is a function belonging to an object. It's a procedure or an action we ask the object to do.
+#What is the difference between the find and index methods?
+#The index method raises a ValueError if the substring argument does not exist in the original string. The find method returns a -1 instead.
+#What single string method replaces uppercase characters with lowercase characters and lowercase characters with uppercase characters?
+#swapcase
+#What are the 3 ways that you can provide arguments to the format function?
+#Relative position, numeric position, and keyword arguments.
+#What method removes whitespace from the beginning and end of a string?
+#strip
+#What method capitalizes the first letter of each word in a string?
+#title
+#What method substitutes all occurrences of a letter in a string with another letter?
+#replace
+#Pick a string method that returns a Boolean and describe how it works. Provide a code example.
+#The isspace method returns True if a string consists only of spaces.
+#print("      ".isspace()) # True
+
+
+##############
+# like a script 0 is false vaule and other than 0 is true value:
+#if 3: # true
+#    print("hello") # hello
+#if 0: # false
+#    print("hello") # no output
+#if -1: # true
+#    print("hello") # hello
+
+### emtpy string is false vaule and anyother string is true value
+
+#if "": #false
+#    print("hello")
+#if "hello":
+#    print("hello") #hello
+
+
+# Define a even_or_odd function that accepts a single integer.
+# If the integer is even, the function should return the string “even”.
+# If the integer is odd, the function should return the string “odd”.
+#
+# even_or_odd(2)    => "even"
+# even_or_odd(0)    => "even"
+# even_or_odd(13)   => "odd"
+# even_or_odd(9)    => "odd"
+
+#def even_or_odd(num: int) ->str:
+#    if num % 2 ==0:
+#        return "even"
+#    else:
+#        return "odd"
+#    return "odd" #also wrie in this way
+#print(even_or_odd(9))
+
+
+# Define a truthy_or_falsy function that accepts a single argument.
+# The function should return a string that reads "The value _____ is ______" 
+# where the first space is the argument and the second space 
+# is either 'truthy' or 'falsy'. See the sample invocations below.
+# 
+# truthy_or_falsy(0)        => "The value 0 is falsy"
+# truthy_or_falsy(5)        => "The value 5 is truthy"
+# truthy_or_falsy("Hello")  => "The value Hello is truthy"
+# truthy_or_falsy("")       => "The value  is falsy"
+
+#def truthy_or_falsy(char):
+#    if bool(char):
+#        return f"The value {char} is truthy"
+
+#    return f"The vaule {char} is falsy"
+
+#print(truthy_or_falsy(0))
+
+
+
+# Declare a negative_energy function that accepts a numeric argument and returns its absolute value. 
+# The absolute value is the number's distance from zero.
+# 
+# negative_energy(5)    => 5
+# negative_energy(10)   => 10
+# negative_energy(-5)   => 5
+# negative_energy(-8)   => 8
+# negative_energy(0)    => 0
+
+#def negative_energy(value):
+#    if value >= 0:
+#        return value
+#    elif value < 0:
+#        return -1 * value
+#print(negative_energy(0))
+
+###write if else statement in 1 line code
+
+#zip_code="110084"
+#if len(zip_code) == 6:
+#    check = "Valid"
+#else:
+#    check = "Invalid"
+#print(check) 
+
+#short form of if else statement
+
+#check = "Vaild" if len(zip_code) == 6  else "Invalid"
+#print(check)
+
+
+# Define a divisible_by_three_and_four function that accepts a number as its argument. 
+# It should return True if the number is evenly divisible by both 3 and 4 . 
+# It should return False otherwise.
+#
+# divisible_by_three_and_four(3)   => False
+# divisible_by_three_and_four(4)   => False
+# divisible_by_three_and_four(12)  => True
+# divisible_by_three_and_four(18)  => False
+# divisible_by_three_and_four(24)  => True
+
+#def divisible_by_three_and_four(value):
+#    return bool(value % 3 == 0 and value % 4 == 0)
+
+#print(divisible_by_three_and_four(24))
+
+
+# Declare a string_theory function that accepts a string as an argument. 
+# It should return True if the string has more than 3 characters 
+# and starts with a capital “S”. It should return False otherwise.
+#
+# string_theory("Sansa") => True
+# string_theory("Story") => True
+# string_theory("See") => False
+# string_theory("Fable") => False
+
+#def string_theory(value):
+#    return bool(len(value) > 3 and value[0]=="S" )
+
+#print(string_theory("Purshottam"))
+    
+#Loop: A series of instructions that is repeated
+#infinite loop: a loop that run forever
+# 
+# 
+# The problem is simple but deceptive.
+
+#Define a fizzbuzz function that accepts a single number as an argument. The function should print every number from 1 to that argument. 
+#There are a couple caveats.
+#If the number is divisible by 3, print "Fizz" instead of the number.
+#If the number is divisible by 5, print "Buzz" instead of the number.
+#If the number is divisible by both 3 and 5, print "FizzBuzz" instead of the number.
+#If the number is not divisible by either 3 or 5, just print the number.
+
+#def fizzbuzz(value1: int):
+#    my_list=[]
+#    for value in range(1,value1+1):
+     #   print(value)
+#        if value % 3 == 0 and value % 5 == 0:
+#            my_list.append("FizzBuzz")
+#        elif value % 5 == 0:
+#            my_list.append("Buzz")
+#        elif value % 3 == 0:
+#            my_list.append("Fizz")
+#        else:
+#            my_list.append(value)
+#    return my_list
+
+#print(fizzbuzz(100))
+#for i in fizzbuzz(30):
+#    print(i)
+
+#def fizzbuzz(value1: int):
+#    for value in range(1,value1+1):
+#     #   print(value)
+#        if value % 3 == 0 and value % 5 == 0:
+#            print("FizzBuzz")
+#        elif value % 5 == 0:
+#            print("Buzz")
+#        elif value % 3 == 0:
+#            print("Fizz")
+#        else:
+#            print(value)
+#
+#print(fizzbuzz(30))
+
+#def fizzbuzz(final_number):
+#  current_number = 1
+#  while current_number <= final_number:
+#    if current_number % 15 == 0:
+#      print("FizzBuzz")
+#    elif current_number % 3 == 0:
+#      print("Fizz")
+#    elif current_number % 5 == 0:
+#      print("Buzz")
+#    else:
+#      print(current_number)
+#    current_number += 1
+
+#print(fizzbuzz(30))
+
+###Recursion : When a function call itself
+
+#def count_number(a):  #RecursionError: maximum recursion depth exceeded while calling a Python object when recursion goes to infinite
+#    if a <=0:
+#        return
+#    print(a)
+#    count_number(a - 1)
+
+#count_number(5)
+
+#def reverse(char):
+#    start_index=0
+#    last_index= len(char) -1
+#    reverse_string=""
+
+#    while last_index >= start_index:
+#        reverse_string +=char[last_index]
+#        last_index -=1
+
+#    return reverse_string
+
+#def reverse(char):
+#    if len(char) <=1:
+#        return char
+
+#    return char[-1] + reverse(char[:-1])
+#print(reverse("purshottam")) #warts
+#s="avd"
+#print(s[:-1])
+
+
+# Define a function called "factorial" that accepts a single number as input
+#
+# A factorial represents the product of all numbers up to, and including, that number. 
+# For example, 5 factorial is 5 * 4 * 3 * 2 * 1 = 120
+#
+# Return the factorial calculation from your function. You should NOT use any kind of loops. 
+# Instead, utilize recursion. Your function MUST call itself.
+# See sample inputs and return values below
+#
+# factorial(1) => 1
+# factorial(2) => 2
+# factorial(3) => 6
+# factorial(4) => 24
+# factorial(5) => 120
+
+# factorial(1) => 1
+#def factorial(a: int):
+#    if a <= 0:
+#        return 
+#    result= a * factorial(a-1)
+#    print(result)
+
+#print(factorial(5))
+
+#"""
+#x = 23
+#epsilon = 0.01
+#step = 0.1
+#guess = 0.0
+
+#while abs(guess**2-x) >= epsilon:
+#    if guess <= x:
+#        guess += step
+#    else:
+#        break
+
+#if abs(guess**2 - x) >= epsilon:
+#    print('failed')
+#else:
+#    print('succeeded: ' + str(guess))
+#"""
+
+
+##LIST
+#List: A data structure that store an ordered sequence of objects
+#empty=[] #create a empty lisy
+#empty=list() #create a empty list   list are harmdegreous means all matter in list are same like all are string or all are int
+#soda=["pepsi",
+#      "coka",
+#      "dodo"]
+
+#print(soda)
+#print(len(soda))
+
+# Create an empty list and assign it to the variable "empty".
+# Create a list with a single Boolean — True — and assign it to the variable "active".
+# Create a list with 5 integers of your choice and assign it to the variable "favorite_numbers".
+# Create a list with 3 strings  — "red", "green", "blue" — and assign it to the variable "colors".
+# Declare an is_long function that accepts a single list as an argument
+# It should return True if the list has more than 5 elements, and False otherwise
+
+#empty=[]
+#active=["True"]
+#favorite_numbers=["1","2","3","4","5","purshottam","3.14"]
+#print(favorite_numbers)
+#colors=["red","blue","green"]
+
+#def is_long(char):
+#    return  len(char)>5
+
+#print(is_long(["1","2","3","4"]))
+
+#print(favorite_numbers[5][3])
+#print(favorite_numbers[::-1])
+
+
+
+# Define a first_and_last function that accepts a list of strings. 
+# The function should return a concatenation of the first element and the last element. 
+# Assume the list will always have 1 or more elements.
+#
+# first_and_last(["a", "b", "c"])        => "ac"
+# first_and_last(["bob", "tom", "rob"])  => "bobrob"
+# first_and_last(["a"])                  => "aa"
+
+#def first_and_last(elements):
+#    return elements[0]+elements[-1]
+#print(first_and_last(["bob", "tom", "rob"]))
+
+
+# Define a product_of_even_indices function that accepts a list of numbers. 
+# The list will always have 6 total elements. 
+# The function should return the product (multiplied total) of all numbers at an even index (0, 2, 4).
+#
+# product_of_even_indices([1, 2, 3, 4, 5, 6])    =>  15
+# product_of_even_indices([3, 4, 3, 5, 3, 6])    =>  27
+
+#def product_of_even_indices(elements):
+#    return elements[0]*elements[2]*elements[4]
+
+#print(product_of_even_indices([1, 2, 3, 4, 5, 6]))
+#print(product_of_even_indices([3, 4, 3, 5, 3, 6]) )
+
+
+
+# Define a split_in_two function that accepts a list and a number.
+# If the number is even, return the list elements from the third element to the end of the list.
+# If the number is odd, return the list elements from index 0 (inclusive) to 2 (exclusive)
+#
+# EXAMPLE:
+#values = ["a", "b", "c", "d", "e", "f"]
+# split_in_two(values, 3)     => ["a", "b"]
+# split_in_two(values, 4)     => ["c", "d", "e", "f"]
+# split_in_two(values, 1)     => ["a", "b"]
+# split_in_two(values, 10)    => ["c", "d", "e", "f"]
+
+
+#def split_in_two(values,number):
+#    if number % 2 ==0:
+#        return values[3:]
+#    else :
+#        return values[0:2]
+
+#print(split_in_two(values, 3))
+
+
+# Declare a beginning_and_end function that accepts a list of elements.
+#
+# It should return True if the first and last elements in the list are equal and False if they are unequal.
+#
+# Assume the list will always have at least 1 element.
+#
+# beginning_and_end([1, 2, 3, 1])     => True
+# beginning_and_end([1, 2, 3, 4, 5])  => False
+# beginning_and_end(["a", "b", "a"])  => True
+# beginning_and_end([15])             => True
+
+
+#def beginning_and_end(elements):
+#    return  elements[0] == elements[-1]
+
+#print(beginning_and_end([1, 2, 3,1]))
+
+
+
+# Declare a long_word_in_collection function that accepts a list and a string. 
+# The function should return True if 
+#   - the string exists in the list AND
+#   - the string has more than 4 characters.
+#
+#words = ["cat", "dog", "rhino"]
+# long_word_in_collection(words, "rhino")  => True
+# long_word_in_collection(words, "cat")    => False
+# long_word_in_collection(words, "monkey") => False
+
+#def long_word_in_collection(words,char):
+#    return char in words and len(char) > 4
+
+#print(long_word_in_collection(words, "cat"))
+
+# Declare a nested_extraction function that accepts a list of lists and an index position.
+#
+# The function should use the index as the basis of finding both the nested list 
+# and the element from that list with the given index position
+#
+# You can assume the number of lists will always be equal to 
+# the number of elements within each of them.
+#
+#nl = [[3, 4, 5], [7, 8, 9], [10, 11, 12]]
+# nested_extraction(nl, 0)  => 3
+# nested_extraction(nl, 1)  => 8
+# nested_extraction(nl, 2)  => 12
+
+
+#def nested_extraction(element,value):
+#    return element[value][value]
+
+#print(nested_extraction(nl, 1))
+
+
+# Define a sum_of_lengths function that accepts a list of strings.
+# The function should return the sum of the string lengths.
+#
+# EXAMPLES
+# sum_of_lengths(["Hello", "Bob"])                  => 8
+# sum_of_lengths(["Nonsense"])                      => 8
+# sum_of_lengths(["Nonsense", "or", "confidence"])  => 20
+
+#def sum_of_lengths(elements):
+#    total=0
+#    for element in elements:
+#        for lenght in element:
+#            total +=len(lenght)
+#    return total
+
+
+#print(sum_of_lengths(["Nonsense", "or", "confidence"]))
+
+
+
+# Define a product function that accepts a list of numbers.
+# The function should return the product of the numbers.
+# The list will always have at least one value
+#
+# EXAMPLES
+# product([1, 2, 3])     => 6
+# product([4, 5, 6, 7])  => 840
+# product([10])          => 10
+
+#def product(elements):
+#    total=1
+#    for element in elements:
+#        total *=element
+#    return total
+
+#print(product([4, 5, 6,7]))
+
+#values=[3,6,9,12,15,18,21,24]
+#other_values=[5,10,15,20,25,30]
+
+#def odds_sum(elements):
+#    total=0
+#    for element in elements:
+#        if element % 2 != 0:
+#            total +=element
+#    return total
+
+#print(odds_sum(values))
+
+#def greatest_number(numbers):
+#    greatest=numbers[0]
+#    for number in numbers:
+#        if greatest < number:
+#            greatest=number
+#    return greatest
+
+#print(greatest_number([1,2,3])) # 3
+#print(greatest_number([3,2,1])) # 3
+
+# Define a smallest_number function  that accepts a list of numbers.
+# It should return the smallest value in the list.
+#
+# smallest_number([1, 2, 3])     => 1
+# smallest_number([3, 2, 1])     => 1
+# smallest_number([4, 5, 4])     => 4
+# smallest_number([-3, -2, -1])  => -3
+
+#def smallest_number(numbers):
+#    greatest=numbers[0]
+#    for number in numbers:
+#        if greatest > number:
+#            greatest=number
+#    return greatest
+
+#print(smallest_number([1, 2, 3]))
+
+# Define a concatenate function that accepts a list of strings. 
+#
+# The function should return a concatenated string which consists of
+# all list elements whose length is greater than 2 characters.
+#
+# concatenate(["abc", "def", "ghi"])      => "abcdefghi"
+# concatenate(["abc", "de", "fgh", "ic"]) => "abcfgh"
+# concatenate(["ab", "cd", "ef", "gh"])   => ""
+
+#def concatenate(elements):
+#    total=""
+#    for i in elements:
+#        if len(i) > 2:
+#            total +=i
+
+#    return total
+
+#print(concatenate(["ab", "de", "gh"]))
+
+
+# Define a super_sum function that accepts a list of strings. 
+# The function should sum the index positions of the first occurence of the letter “s” in each word. 
+#
+# Not every word is guaranteed to have an “s”.
+# Don’t use "sum" as a variable name as it’s a built-in keyword.
+#
+# super_sum([])                                 => 0
+# super_sum(["mustache"])                       => 2
+# super_sum(["mustache", "greatest"])           => 8
+# super_sum(["mustache", "pessimist"])          => 4
+# super_sum(["mustache", "greatest", "almost"]) => 12
+
+#def super_sum(elements):
+#    total=0
+#    for element in elements:
+#        if 's'in element:
+#            index=element.index("s")
+#            total +=index
+
+#    return total
+
+#print(super_sum(["mustache"]))
+#"""
+
+#import math
+#def polysum(n,s):
+#    a=(.25*n*s**2/math.tan(3.14/n) + (s*n)**2)
+#    return (round(a,4))
+
+#print(polysum(79, 40))
+
+#a=["1","2","3","4"]
+#print(reversed(a))
+#b=[]
+#for i in reversed(a):
+#    print(i)
+#    b +=i
+#print(b)
+#a=["hi","hello tyagi","purshottam tyagi ji","monster india","Global logic and YATRA"]
+#print(enumerate(a))
+
+#for index,errand in enumerate(a,1):#1 is staring index 
+#    print(f"{errand} is number of {index} on my list today")
+
+
+
+# Define an in_list function that accepts a list of strings and a separate string.
+# Return the index where the string exists in the list.
+# If the string does not exist, return -1.
+# Do NOT use the find or index methods.
+#
+# EXAMPLES
+#strings = ["enchanted", "sparks fly", "long live"]
+# in_list(strings, "enchanted")  ==> 0
+# in_list(strings, "sparks fly") ==> 1
+# in_list(strings, "fifteen")    ==> -1
+# in_list(strings, "love story") ==> -1
+
+#def in_list(strings,index):
+#    for errand,second in enumerate(strings):
+#        if second == index:
+#            return errand
+#    return -1 
+
+#print(in_list(strings, "long live"))
+
+
+# Define a sum_of_values_and_indices function that accepts a list of numbers. 
+# It should return the sum of all of the elements along with their index values.
+#
+# EXAMPLES
+# sum_of_values_and_indices([1, 2, 3])    => (1 + 0) + (2 + 1) + (3 + 2) => 9
+# sum_of_values_and_indices([0, 0, 0, 0]) => 6
+# sum_of_values_and_indices([])           => 0
+
+#def sum_of_values_and_indices(elements):
+#    total=0
+#    for i,element in enumerate(elements):
+#        #total = i + element
+#        total +=(i+element)
+#    #    print(total)
+#    return total
+
+#print(sum_of_values_and_indices([]))
+
+
+#for color, index in enumerate(["red", "green", "blue"]):
+#    print(color)
+
+
+# Declare a length_match function that accepts a list of strings and an integer.
+# It should return a count of the number of strings whose length is equal to the number.
+#
+# EXAMPLES
+# length_match(["cat", "dog", "kangaroo", "mouse"], 3))  => 2
+# length_match(["cat", "dog", "kangaroo", "mouse"], 5))  => 1
+# length_match(["cat", "dog", "kangaroo", "mouse"], 4))  => 0
+# length_match([], 5))                                   => 0
+
+
+#def length_match(elements,indexes):
+#    found=0
+#    for value in elements:
+#        if len(value) == indexes:
+#            found +=1
+    
+#    return found
+#print(length_match(["cat", "dog", "kangaroo", "mouse"], 3))
+
+
+# Declare a sum_from function that accepts two numbers as arguments.
+# The second number will always be greater than the first number.
+# The function should return the sum of all numbers from the first number to the second number (inclusive).
+#
+# EXAMPLES
+# sum_from(1, 2)   # 1 + 2                  => 3
+# sum_from(1, 5)   # 1 + 2 + 3 + 4 + 5      => 15
+# sum_from(3, 8)   # 3 + 4 + 5 + 6 + 7 + 8  => 33
+# sum_from(9, 12)  # 9 + 10 + 11 + 12       => 42
+
+#def sum_from(element1,element2):
+#    total=0
+#    for i in range(element1,element2+1):
+#        total +=i
+#    return total
+
+#print(sum_from(1, 2))
+
+
+# Declare a same_index_values function that accepts two lists.
+# The function should return a list of the index positions in which the two lists have equal elements
+#
+# EXAMPLES
+# same_index_values([1, 2, 3], [3, 2, 1])                         => [1]
+# same_index_values(["a", "b", "c", "d"], ["c", "b", "a", "d"])   => [1, 3]
+
+#def same_index_values(elements1,elements2):
+#    str=[]
+#    for index1, element1 in enumerate(elements1):
+#        print(elements2[index1])
+#        if element1 == elements2[index1]:
+#            str.append(index1)
+
+#    return str
+
+#print(same_index_values([1, 2, 3], [3, 2, 1]))
+#print(same_index_values(["a", "b", "c", "d"], ["c", "b", "a", "d"]))
+
+
+#import sys
+#found=0
+#for i in sys.argv[1:]:
+#    found +=len(i)
+
+#print(found)
+
+
+#a=[1,2,3,4,5]
+#def number(a):
+#    total=0
+#    for index,num in enumerate(a):
+#        total += (num*(index-1))#
+
+#    return total
+#print(number(a))
+
+
+#a=['1','2','3','4']
+#print(a)
+#a[1]='b'
+#print(a)
+
+#print(a[2:4])
+#a[2:4]=["purshottam"]
+#print(a)
+
+# Given the great_directors list below, overwrite the “Steven Spielberg” string with a string of “Michael Bay”.
+#great_directors = ["Martin Scorsese", "Steven Spielberg", "Francis Ford Coppola"]
+
+#great_directors[1]="Michael Bay"
+
+
+
+# Given the transformers list below, overwrite “Bumblebee” with “Grimlock”.
+#transformers = ["Optimus Prime", "Megatron", "Bumblebee", "Starscream"]
+#transformers[2]="Grimlock"
+
+# Given the camping_trip_supplies list below, overwrite "Socks" with "Food".
+#camping_trip_supplies = ["Socks", "Flashlight", "Tent", "Blanket"]
+#camping_trip_supplies[0]="Food"
+
+# Given the tech_companies list below, overwrite the Microsoft, Blueberry, and IBM strings 
+# with the strings “Facebook” and “Apple”. Use list slicing syntax.
+#ech_companies = ["Google", "Microsoft", "Blackberry", "IBM", "Yahoo"]
+#tech_companies[1:4]=["Facebook","Apple"]
+#print(tech_companies)
+
+#tech_companies.append("Monster")
+#print(tech_companies)
+
+#a=[2,3,4,5,6]
+
+#def square(a):
+#    sqaure=[]
+#    for i in a:
+#        sqaure.append(i**2)
+#    return sqaure
+#print(square(a))
+
+#def convert_float(a):
+#    float_number=[]
+#    for i in a:
+    #    float_number.append(i+0.0)
+##        float_number.append(float(i))
+#    return float_number
+
+#print(convert_float(a))
+#def even_odd(a):
+#    odd_even=[]
+#    for i in a:
+#        odd_even.append(i %2 == 0)
+
+
+#    return odd_even
+
+#print(even_odd(a))
+
+
+# Define an only_evens function that accepts a list of numbers. 
+# It should return a new list consisting of only the even numbers from the original list.
+#
+# EXAMPLES
+# only_evens([4, 8, 15, 16, 23, 42]) => [4, 8, 16, 42]
+# only_evens([1, 3, 5])              => []
+# only_evens([])                     => []
+
+#def only_evens(elements):
+#    number=[]
+#    for i in elements:
+#        if i % 2 == 0:
+#            number.append(i)
+#    return number
+
+#print(only_evens([]))
+
+# Define a long_strings function that accepts a list of strings. 
+# It should return a new list consisting of only the strings that have 5 characters or more.
+#
+# EXAMPLES
+# long_strings(["Hello", "Goodbye", "Sam"])  => ["Hello", "Goodbye"]
+# long_strings(["Ace", "Cat", "Job"])        => []
+# long_strings([])                           => []
+
+#def long_string(elements):
+#    characters=[]
+#    for i in elements:
+#        if len(i) >= 5:
+#            characters.append(i)
+#    return characters
+
+#print(long_string(["Hello", "Goodbye", "Sam"]))
+
+#a=[1,2,3,4,5,6]
+#a.extend([7,8,9,10])
+#a.append(12,13,14)) # it show error TypeError: append() takes exactly one argument (3 given)
+#a.extend([11,12,13])
+#print(a)
+#b=[7,8,9,10,11]
+#c=a+b
+#print(c)
+#c.insert(0,999)
+#print(c)
+#c.insert(-1,998)
+#print(c)
+#c.insert(100,997)
+#print(c)
+
+
+# Write a factors function that accepts a positive whole number
+# It should return a list of all of the number's factors in ascending order
+# HINT: Could the range function be helpful here? Or maybe a while loop?
+#
+# EXAMPLES
+# factors(1)  => [1]
+# factors(2)  => [1, 2]
+# factors(10) => [1, 2, 5, 10]
+# factors(64) => [1, 2, 4, 8, 16, 32, 64]
+
+
+#def factors(element,element1):
+#    list=[]
+#    list1=[]
+#    for i in range(1,element+1):
+#        if element % i == 0:
+#            list.append(i)
+##    for y in range(1,element1+1):
+#        if element1 % y == 0:
+#            list1.append(y)
+    
+
+#    print(list)
+#    print(list1)
+#    x= list+ list1
+#    x= list(dict.fromkeys(x))
+#    return x
+
+#print(factors(5,8))
+
+#pop method
+#a=[1,2,3,4,5,6,7,8]
+#b=a.pop()
+#print(a)
+#print(b)
+#a.pop(0)
+#print(a)
+#a.pop(-1)
+#print(a)
+#a.pop(-5)
+#print(a)
+
+#delete
+#a=[1,2,3,4,5,6,7,8,9,1]
+#del a[1:3]
+#print(a)
+#remove
+#a.remove(1)# a.remove(0) ValueError: list.remove(x): x not in list
+#print(a)#[2, 3, 4, 5, 6, 7, 8, 9, 1] remove only 1 not last one,if you want to last one then removed funtion 2 type
+
+#if 10 in a:   # if 10 not present it show error but due to this it doesnoot show error
+#    a.remove(10)
+
+#clear method
+#a.clear()
+#print(a)
+
+
+# Declare a delete_all function that accepts a list of strings and a target string
+# Remove all occurrences of the target string from the list and return it
+#
+# EXAMPLES
+# delete_all([1, 3, 5], 3)  => [1, 5]
+# delete_all([5, 3, 5], 5)  => [3]
+# delete_all([4, 4, 4], 4)  => []
+# delete_all([4, 4, 4], 6)  => [4, 4, 4]
+
+#def delete_all(elements,number):
+#    while number in elements:
+#        elements.remove(number)
+
+#    return elements
+
+#print(delete_all([4,4,4 ], 4))
+
+
+# Declare a push_or_pop function that accepts a list of numbers
+# Build up and return a new list by iterating over the list of numbers
+# If a number is greater than 5, add it to the end of the new list
+# If a number is less than or equal to 5, remove the last element added to the new list
+# Assume the order of numbers in the argument will never require removing from an empty list
+#
+# EXAMPLES
+# push_or_pop([10])            => [10]
+# push_or_pop([10, 4])         => []
+# push_or_pop([10, 20, 30])    => [10, 20, 30]
+# push_or_pop([10, 20, 2, 30]) => [10, 30]
+
+#def push_or_pop(elements):
+#    a=elements
+#    b=[]
+#    for i in a:
+#        if i > 5:
+#            b.append(i)
+#        else:
+#            b.pop()
+    
+#    return b
+
+#print(push_or_pop([10,20,30]))
+
+#reverse
+#from learn_to_code_with_python.ps3_hangman import wordlist
+
+
+#a=[1,2,3,4,5]
+#print(a.reverse())#None not a correct method
+#a.reverse()
+#print(a)
+#b=[]
+#for i in a:
+#    b.append(i)
+#print(b)
+
+
+
+#Sorted
+
+#a=["Aa","Dd","Cc","Bb"]
+#a.sort()
+#print(a)
+#b=["aa","Dd","Cc","bb"]
+#b.sort()
+#print(b)#['Cc', 'Dd', 'aa', 'bb'] sort alogrthim firt give capital letter then small letter 
+
+#Sorted method is use not to modify orginal list whether sort function change orignal list 
+#b=["aa","Dd","Cc","bb"]
+#c=sorted(b)
+#print(b)
+#print(c)
+#  
+#    
+#units_of_measurement = ["miles", "meters", "yards"]
+#units_of_measurement.reverse()
+#print(units_of_measurement)
+
+#Count
+
+#a=[1,2,3,3,4,4,4.0,5,5.0]
+#print(a.count(4))
+#print(a.count(3))
+#print(a.count(5))
+
+#indexx
+#a=[1,2,3,4,4]
+
+#print(a.index(4))# it show index postion in value list 4
+#print(a.index(5))#ValueError: 5 is not in list
+
+#if 5 in a: #search 
+#    print(a.index(5))
+#print(a.index(4,4))
+
+
+
+# Define an encrypt_message function that accepts a string.
+# The input string will consist of only alphabetic characters.
+# The function should return a string where all characters have been moved
+# "up" two spots in the alphabet. For example, "a" will become "c".
+#
+# EXAMPLES
+# encrypt_message("abc") => "cde"
+# encrypt_message("xyz") => "zab"
+# encrypt_message("")    => ""
+
+#def encrypt_message(elements):
+#    alphabet="abcdefghijklmnopqrstuvwxyz"
+#    encrypt=""
+#    for letter in elements:
+#        encrypt_index=(alphabet.index(letter) + 2) % 26
+#        print(encrypt_index)
+#        encrypt += alphabet[encrypt_index]
+
+#    return encrypt
+
+
+#print(encrypt_message("xyz"))
+
+#copy
+
+#a=["Hi","bye"]
+#more_unit = a.copy() # it copy seprate copy
+#print(more_unit) 
+#a.append("hello")
+#print(a)
+#even_more = a[:]
+#print(even_more)
+#a.append("hoho")
+#print(a)
+#print(even_more)
+#even_more.append("hehehe")
+#print(even_more)
+#print(a)
+#even_more.remove("hehehe")
+#print(even_more)
+
+#split
+#name="purshottam, kanak, monika, shivaye, nitya"
+#print(name.split(", ")) # it split into list
+#print(name.split(", ",2))
+
+#name1="i have a name of purshottam"
+#print(name1.split(" "))
+#print(name1.split(" ",2))
+
+
+#join
+#address=["hno","649","kno","146","burari","delhi"]
+#",".join(address)
+#print(address)
+#print(",".join(address))
+#a=",".join(address)
+#print(a)
+#print("-".join(["88","00","91","55","05"]))
+
+# Define a word_lengths function that accepts a string. 
+# It should return a list with the lengths of each word.
+#
+# EXAMPLES
+# word_lengths("Mary Poppins was a nanny")  => [4, 7, 3, 1, 5]
+# word_lengths("Somebody stole my donut")   => [8, 5, 2, 5]
+
+#def word_lengths(elements):
+#    a=elements.split(" ")
+#    b=[]
+##    for i in a:
+#        b.append(len(i))
+#    return b
+
+#print(word_lengths("Somebody stole my donut") )
+
+
+
+# Define a cleanup function that accepts a list of strings.
+# The function should return the strings joined together by a space.
+# There's one BIG problem -- some of the strings are empty or only consist of spaces!
+# These should NOT be included in the final string
+#
+# cleanup(["cat", "er", "pillar"])           => "cat er pillar"
+# cleanup(["cat", " ", "er", "", "pillar"])  => "cat er pillar"
+# cleanup(["", "", " "])      
+
+
+#def cleanup(elements):
+#    a=[]
+#    for i in elements:
+#        if i.isspace() or len(i) == 0:
+#            continue
+#        a.append(i)
+
+#    return (" ".join(a))
+#print(cleanup(["cat", " ", "er", "", "pillar"]))
+
+#ZIP
+#a=["Hi","I","AM"]
+#b=["purshottam","tyagi","AM"]
+#c=["kanak","tyagi",]
+
+#print(zip(a,b,c))#<zip object at 0x7fd0fbce3108>
+#print(list(zip(a,b,c)))#[('Hi', 'purshottam', 'kanak'), ('I', 'tyagi', 'tyagi')]
+
+#for x,y,z in zip(a,b,c):
+#    print(f"{x} {y}  {z}")
+
+
+# Define a nested_sum function that accepts a list of lists of numbers
+# The function should return the sum of the values
+# The list may contain empty lists
+#
+# EXAMPLES
+# nested_sum([[1, 2, 3], [4, 5]])            => 15
+# nested_sum([[1, 2, 3], [], [], [4], [5]])  => 15
+# nested_sum([[]])                           => 0
+
+#def nested_sum(elements):
+#    a=0
+#    for i in elements:
+#        for y in i:
+#            a +=y
+
+#   return a
+
+#print(nested_sum([[1, 2, 3], [4, 5]]))
+
+
+# Define a fancy_concatenate function that accepts a list of lists of strings
+# The function should return a concatenated string
+# The strings in a list should only be concatenated if the length of the list is 3
+#
+# EXAMPLES
+# fancy_concatenate([["A", "B", "C"]])                        => "ABC"
+# fancy_concatenate([["A", "B", "C"], ["D", "E", "F"]])       => "ABCDEF"
+# fancy_concatenate([["A", "B", "C"], ["D", "E", "F", "G"]])  => "ABC"
+# fancy_concatenate([["A", "B", "C"], ["D", "E"]])            => "ABC"
+# fancy_concatenate([["A", "B"], ["C", "D"]])                 => ""
+
+
+#def fancy_concatenate(elements):
+#    a=""
+##    for i in elements:
+#        if len(i) == 3:
+#            for y in i:
+#                a +=y
+
+#    return a
+
+#print(fancy_concatenate([["A", "B", "C"]]))                       
+##print(fancy_concatenate([["A", "B", "C"], ["D", "E", "F"]]))
+#print(fancy_concatenate([["A", "B", "C"], ["D", "E", "F", "G"]])) 
+#print(fancy_concatenate([["A", "B", "C"], ["D", "E"]]))            
+#print(fancy_concatenate([["A", "B"], ["C", "D"]]))
+
+#numbers=[2,3,4,5,6]
+#a=[]
+#for i in numbers:
+#    a.append(i**2)
+#print(a)
+#sqaure=[i**2 for i in numbers]
+#print(sqaure)
+
+#name=["purshottam","kanak","nitya","papa"]
+#print([len(i) for i in name])
+
+#uppercase=["purshottam","tyagi"]
+#print([i.upper() for i in uppercase])
+
+#a=[1.1,2.3,4.5,6.6,7.8]
+#print([int(i) for i in a])
+
+#print(["abcdefghijklmnopqrstuvwxxyz".index(char) for char in "purshottam" ])
+#print([i/2 for i in range(20)])
+
+
+#donut=["hi cream","by","hello cream"]
+#cream_donut=[i for i in donut if "cream" in i]
+#print(cream_donut)#['hi cream', 'hello cream']
+
+#cream_donut=[len(i) for i in donut if "cream" in i]
+#print(cream_donut)
+
+#cream_donut=[i.upper() for i in donut if "cream" in i]
+#print(cream_donut)
+
+
+#cream_donut=[i.split(" ")[0] for i in donut if "cream" in i]
+#print(cream_donut)
+
+
+# Uncomment the commented lines of code below and complete the list comprehension logic
+
+# The floats variable should store the floating point values 
+# for each string in the values list.
+#values = ["3.14", "9.99", "567.324", "5.678"]
+#floats = [float(i) for i in values]
+#print(floats)
+
+# The letters variable should store a list of 5 strings. 
+# Each of the strings should be a character from name concatenated together 3 times.
+# i.e. ['BBB', 'ooo', 'rrr', 'iii', 'sss']
+#name = "Boris"
+#letters = [letter*3 for letter in name]
+#print(letters)
+
+# The 'lengths' list should store a list with the lengths
+# of each string in the 'elements' list
+#elements = ["Hydrogen", "Helium", "Lithium", "Boron", "Carbon"]
+#lengths = [len(i) for i in elements]
+
+
+
+# Declare a destroy_elements function that accepts two lists.
+# It should return a list of all elements from the first list that are NOT contained in the second list.
+# Use list comprehension in your solution.
+#
+# EXAMPLES
+# destroy_elements([1, 2, 3], [1, 2])      => [3]
+# destroy_elements([1, 2, 3], [1, 2, 3])   => []
+# destroy_elements([1, 2, 3], [4, 5])      => [1, 2, 3]
+
+
+#def destroy_elements(elements,elements1):q 
+#    return [i for i in elements if i not in elements1]
+
+#print(destroy_elements([1, 2, 3],[4,5]) )
+
+#help(len)
+#help(print)
+
+#number=[1,2,3,4,5,6]
+#def cube(char):
+#    return char**2
+
+
+#print(map(cube, number))
+#print(list(map(cube, number)))
+
+
+#Lambha  function
+#An anonymous function(a function without name)
+#metals=["glod","sliver","white gold"]
+#print(list(filter(lambda i: len(i)>5,metals)))
+
+#print(list(filter(lambda i: "g" in i, metals)))
+
+# Declare a right_words function that accepts a list of words and a number.
+# Return a new list with the words that have a length equal to the number.
+# Do NOT use list comprehension.
+#
+# EXAMPLES:
+# right_words(['cat', 'dog', 'bean', 'ace', 'heart'], 3)     => ['cat', 'dog', 'ace']
+# right_words(['cat', 'dog', 'bean', 'ace', 'heart'], 5)     => ['heart']
+# right_words([], 4)                                         => []
+
+
+#def right_words(elements,char):
+#    return list(filter(lambda i: len(i) ==char,elements))
+
+# right_words(['cat', 'dog', 'bean', 'ace', 'heart'], 3)     => ['cat', 'dog', 'ace']
+#print(right_words(['cat', 'dog', 'bean', 'ace', 'heart'], 3))
+
+
+# Declare an only_odds function.
+# It should accept a list of whole numbers.
+# It should return a list with only the odd numbers from the original list.
+# Do NOT use list comprehension.
+#
+# EXAMPLES:
+# only_odds([1, 3, 5, 6, 7, 8])      =>  [1, 3, 5, 7]
+# only_odds([2, 4, 6, 8])            =>  []
+
+#def only_odds(elements):
+#    return list(filter(lambda i: i % 2 ==1,elements ))
+
+#print(only_odds([1,3,5,6,7,8]))
+
+
+
+# Declare a count_of_a function that accepts a list of strings.
+# It should return a list with counts of how many “a” characters appear per string.
+# Do NOT use list comprehension.
+#
+# EXAMPLES:
+# count_of_a(["alligator", "aardvark", "albatross"])    => [2, 3, 2]
+# count_of_a(["plywood"])                               => [0]
+# count_of_a([])                                        => []
+
+#def count_of_a(elements):
+#    return list(map(lambda i: i.count("a"),elements ))
+
+#print(count_of_a(["alligator", "aardvark", "albatross"]))
+
+
+#print(max("A","B","C"))
+#print(min("A","B","C"))
+
+
+# Declare a greater_sum function that accepts two lists of numbers.
+# It should return the list with the greatest sum.
+# You can assume the lists will always have different sums.
+#
+# EXAMPLES
+# greater_sum([1, 2, 3], [1, 2, 4]) => [1, 2, 4]
+# greater_sum([4, 5], [2, 3, 6])    => [2, 3, 6]
+# greater_sum([1], [])              => [1]
+#def greater_sum(elements,elements1):
+#    if sum(elements) > sum(elements1):
+#        return elements
+#    else:
+#        return elements1
+#    return [elements, if sum(elements) > sum(elements1)]
+
+#print(greater_sum([1, 2, 3], [1, 2, 4]))
+
+
+# Declare a sum_difference function that accepts two lists of numbers.
+# It should return the difference between the sum of values in the first list and the second list
+#
+# EXAMPLES
+# sum_difference([1, 2, 3], [1, 2, 4]) => 6 - 7 => -1
+# sum_difference([4, 5], [2, 3, 6])    => 9 - 11 => -2
+# sum_difference([1], [])              => 1
+
+
+#def sum_difference(elements,elements1):
+#    return (sum(elements) - sum(elements1))
+
+#print(sum_difference([1, 2, 3], [1, 2, 4]))  
+
+
+#dir method
+#print(dir([]))
+#print(dir("pasta"))
+#print(len("pasta"))
+#print("pasta".__len__())
+#print("pu"+"tyagi")
+#print("pu".__add__("tyagi"))
+
+#print(format(.05,".1%"))
+
+#tupple -A fixed lenght immutable list
+
+
+
+# Declare a months tuple with the last 4 months of the year (September, October, November, December) as strings.
+# Make sure the first letter of each month is capitalized.
+
+#months=("September","October","November","December",)
+
+# Create a faves variable with a list of your 3 three favorite movies as strings. 
+# Use the tuple function to convert the list to a tuple and save the result in a movies variable.
+
+#faves=["ram","shma","gita"]
+#tuple(faves)
+
+# Create a numbers_a, numbers_b, and numbers_c tuple. 
+# Each tuple should contain 3 integers. 
+# Declare an all_numbers tuple containing these three tuples.
+#number_a=(1,2,3,)
+#number_b=(4,5,6,)
+#number_c=(7,8,9,)
+
+#number_all=(number_a,number_b,number_c)
+#print(number_all)
+
+#a=(1,2,3,4,)
+##b,c,d,e=a
+#print(f"{b} {c} {d} {e}")
+
+#a=10
+#b=20
+
+#b,a=a,b
+#print(b)
+#print(a)
+
+#a=("ram","sham","gita","sita")
+#a_a,b_b,*c_c = a
+#print(a_a)
+#print(c_c)
+
+#*a_a,b_b=a
+#print(a_a)
+#print(b_b)
+
+
+
+# Given the tuple below, destructure the three values and
+# assign them to position, city and salary variables
+# Do NOT use index positions (i.e. job_opening[1])
+#job_opening = ("Software Engineer", "New York City", 100000)
+
+# Given the tuple below, 
+# - destructure the first value and assign it to a street variable
+# - destructure the last value and assign it to a zip_code variable
+# - destructure the middle two values into a list and assign it to a city_and_state variable
+#address = ("35 Elm Street", "San Francisco", "CA", "94107")
+#street_variable, *center, zip_code    =address
+
+# Declare a sum_of_evens_and_odds function that accepts a tuple of numbers.
+# It should return a tuple with two numeric values:
+# -- the sum of the even numbers
+# -- the sum of the odd numbers.
+#
+# sum_of_evens_and_odds((1, 2, 3, 4))   => (6, 4)
+# sum_of_evens_and_odds((1, 3, 5))      => (0, 9)
+# sum_of_evens_and_odds((2, 4, 6))      => (12, 0)
+
+
+#def sum_of_evens_and_odds(element):
+#    a=0
+#    b=0
+#    c=[]
+#    for i in element:
+#        if i %2 == 0:
+#            a +=i
+#        else:
+#            b +=i
+#    c.append(a)
+#    c.append(b)
+#    return tuple(c)
+#    even_number=[i for i in element if i%2==0]
+#    odd_number=[i for i in element if i%2!=0]
+
+#    return (sum(even_number),sum(odd_number),)
+
+#print(sum_of_evens_and_odds((1, 2,3,4)))
+
+
+#def accept_stuff(*number):
+#    print(type(number))
+#    print(number)
+
+#accept_stuff(1,2,3,4)
+
+
+
+#def greated_number(*numbers):
+#    greatest = numbers[0]
+#    for number in numbers:
+#        if number > greatest:
+#            greatest = number
+
+#    return greatest#
+
+#print(greated_number(10,2,3,4,5,6))
+
+#animals = { 'a': ['aardvark'], 'b': ['baboon'], 'c': ['coati']}
+#animals['d'] = ['donkey']
+#animals['d'].append('dog')
+#animals['d'].append('dingo')
+#print(animals.values())
+#lenght_animal=[]
+#for i in animals.keys():
+#    for y in i:
+#        lenght_animal.append(y)
+#return lenght_animal
+#print(max(lenght_animal))
+#print(animals.values["d"])
+#print(animals.keys("donkey"))
+#print(len(animals.values()))
+
+
+##Dictionaries
+#1.an ordered data structure decalring relationship b/w object
+#A mutual data structure consisting of pairs of keys and vaules
+#A KEY is an object that serves as a unique identifier for a vaule
+#A VALUE  is an Python object
+
+#keys are unqiue,values can be duplicates
+#key must be immutable types(strings,intergers,float,tuples)>values can be data type
+
+
+# Create an empty dictionary and assign it to the variable empty.
+#empty={}
+
+# Create a dictionary with three key-value pairs. 
+# The keys should be strings and the values should be integer values. 
+# Assign the dictionary to a my_dict variable.
+#my_dict={
+#    "ABC":1,
+#    "DEF":2,
+#    "GHI":3
+#}
+
+# A dictionary’s keys can be any immutable data structure. 
+# Create a dictionary with two key-value pairs and assign it to
+# a winning_lottery_numbers variable. 
+# Both of the keys should be tuples. 
+# One of the values should be True, the other value should be False.
+
+#winning_lottery_numbers={
+#    {1,2,3,4,5}:True,
+#    {6,7,8,9,10}:False
+#}
+
+#team={
+#    "india":["S","S","G","V"],
+#    "USA":["A","b","C"]
+#}
+
+#print(team["USA"])
+#team["China"]=["D","E","F"]
+#print(team["China"])
+
+#words=["A","B","C","A"]
+
+#def count_word(words):
+#    count={}
+#    for word in words:
+#        if word in count:
+#            count[word] +=1
+#        else:
+#            count[word] = 1
+#    return count
+
+#print(count_word(words))
+
+#words={1:"A",2:"B",3:"C"}
+#print(words.get(1))
+#print(words.get(4))# if key is not present then it show None
+#print(words.get(5,"F"))
+#print(words)
+#words.setdefault(5,"F")
+#print(words)
+#words.setdefault(5,"G")
+#print(words)# othing happen
+
+#words.setdefault(6)#it return None value in values
+#print(words)
+
+
+# Define a to_dictionary function that accepts a list of strings. 
+# The function should return a dictionary where the keys are the strings 
+# and the values are their original index positions in the list.
+#
+# EXAMPLE:
+#detectives = ["Sherlock Holmes", "Hercule Poirot", "Nancy Drew"]
+# to_dictionary(detectives) => {'Sherlock Holmes': 0, 'Hercule Poirot': 1, 'Nancy Drew': 2}
+
+#def to_dictionary(detectives):
+#    count={}
+#    i=0
+#    for word in detectives:
+#        count.setdefault(word,i)
+#        i +=1
+#    return count
+#    count={}
+#    for words,index in enumerate(detectives):
+#        count[index]=words
+
+#    return count
+
+#print(to_dictionary(detectives))
+
+# Define a length_counts function that accepts a list of strings. 
+# The function should return a dictionary where the keys represent
+# length and the values represent how many strings have that length.
+#
+# EXAMPLE:
+#sa_countries = ["Brazil", "Venezuela", "Argentina", "Ecuador", "Bolivia", "Peru"]
+# length_counts(sa_countries) => # {6: 1, 9: 2, 7: 2, 4: 1}
+# There is 1 string with 6 letters, 2 strings with 9 letters, 
+# 2 strings with 7 letters, and 1 string with 4 letters.
+#def length_counts(sa_countries):
+
+##    count={}
+#    for word in sa_countries:
+#        lenght=len(word)
+#        current_count=count.get(lenght,0)#0 if lenght doesnot exit as key #get ethod give vaule of key
+#        count[lenght]=current_count+1
+#    return count
+
+#print(length_counts(sa_countries))
+
+#pop remove value
+#a={
+#    "A":1,
+#    "B":2,
+#    "C":3
+#}
+#b=a.pop("B")
+#print(b)
+#print(a)
+
+#a.pop("D") #KeyError: 'D;  key d doesnot exit
+#new_year=a.pop("E",2000) # if key doesnot exit then it show 2000 vaule
+#print(new_year)
+#del a["RAJU"] #KeyError: 'RAJU' if key doenot exit
+
+
+# Declare a delete_keys function that accepts two arguments:
+# a dictionary and a list of strings. 
+# For each string in the list, if the string exists as a dictionary key, 
+# delete the key-value pair from the dictionary. 
+#
+# If the string does not exist as a dictionary key, avoid an error. 
+# The return value should be the modified dictionary object.
+#
+# EXAMPLE:
+#import string
+
+
+#my_dict = {
+#   "A": 1,
+#   "B": 2,
+#   "C": 3
+#}
+#
+#strings = ["A", "C"]
+# delete_keys(my_dict, strings) => {'B': 2}
+
+
+#def delete_keys(my_dict,strings):
+#    count={}
+#    for word in my_dict:
+#        if word in strings:
+#            continue
+#        else:
+#            count[word]=my_dict[word]
+
+#    return count
+
+
+#print(delete_keys(my_dict, strings))
+
+#def delete_keys(my_dict,string):
+#    for word in string:
+#        if word in my_dict:
+#            my_dict.pop(word)
+#    return my_dict
+
+#print(delete_keys(my_dict, strings))
+
+#a={
+##    "A":100,
+#    "B":200,
+#    "C":300
+#}
+#b={
+#    "D":400,
+#    "A":150
+#}
+#a.update(b)
+#print(a)# a show updated vaule of A
+#b.update(a)
+#print(b)
+#tv_show={
+#    "first":{
+#        "Season1":{
+#            "A":"A1",
+#            "B":"B2"
+#        },
+#        "Season2":{
+#            "C":"C3",
+#            "D":"D4"
+#        }
+#    },
+#   "Second":{
+#        "Season3":{
+#            "E":["E5","e6"],
+#            "G":"G6"
+#        },
+#        "Season4":{
+#            "H":"H7",
+#            "I":"I8"
+#        }
+#    }
+#}
+
+#print(tv_show["Second"]["Season3"]["E"][0])
+
+#pounds={
+#    5: 2.345,
+#    10: 4.45678,
+#    25: 11.4567
+#}
+
+#for index,elements in enumerate(pounds):
+#    print(f"{elements} is equal to {pounds[elements]} kilograms")
+
+#for index,element in pounds.items():
+#    print(f"{index} is equal to {element} kilograms")
+
+#for _,element in pounds.items():
+#    print(f"equal to {element} kilograms")
+
+
+
+# Declare an invert function that accepts a dictionary object. 
+# The function should return a new dictionary where the keys and values from the original dictionary are inverted. 
+# Each key should now be a value, and each value should be a key. 
+# Assume both the keys and values of the dictionary are immutable.
+#
+# EXAMPLE:
+#my_dict = {
+#   "A": "B", 
+#   "C": "D",
+#   "E": "F"
+#}
+#
+# invert(my_dict) => {'B': 'A', 'D': 'C', 'F': 'E'}
+
+#def invert(my_dict):
+#    count={}
+#    for i,y in my_dict.items():
+#        count.update({y:i})
+
+#    return count
+
+#print(invert(my_dict))
+
+
+# Declare a count_of_value function that accepts a dictionary and an integer.
+# It should return a count of the number of times the integer appears 
+# as a value among the dictionary’s values.
+#
+# EXAMPLE:
+#my_dict = { "a" : 5, "b" : 3, "c" : 5 }
+#
+# count_of_value(my_dict, 5) => 2
+# count_of_value(my_dict, 3) => 1
+
+#def count_of_value(my_dict,value):
+#    z = 0
+#    for _,y in my_dict.items():
+#        if y == value:
+#            z += 1
+#            print(i)
+        
+#    return z
+
+#print(count_of_value(my_dict, 3))
+
+
+
+# Declare a sum_of_values function that accepts a dictionary and a list of strings.
+# The dictionary will have keys of strings and values of numbers.
+#
+# The function should return the sum of values for dictionary 
+# keys that are also found in the list.
+#
+# NOTE: sum is a reserved keyword in Python. Don’t use it as a variable name.
+#
+# EXAMPLES:
+#my_dict = { "a": 5, "b": 3, "c": 10 }
+#
+# sum_of_values(my_dict, ["a"])            => 5
+# sum_of_values(my_dict, ["a", "c"])       => 15
+# sum_of_values(my_dict, ["a", "c", "b"])  => 18
+# sum_of_values(my_dict, ["z"])            => 0
+
+#def sum_of_values(my_dict,value):
+#    z=0
+#    for i,y in my_dict.items():
+#        for x in value:
+#            if x == i:
+##                print(y)
+#                z +=y
+                
+
+#    return z
+
+#print(sum_of_values(my_dict, ["a","c"]))
+
+
+
+# Declare a common_elements function that accepts a dictionary
+# It should return a list with all of the elements that are found
+# as both a key and a value in the dictionary
+#
+# HINT: Use the in operation to check for inclusion in a view or list object
+#
+# EXAMPLE:
+#my_dict = {
+#   "A": "K",
+#   "B": "D",
+#   "C": "A",
+#   "D": "Z"
+#}
+#
+# common_elements(my_dict) => ["A", "D"]
+
+#def common_elements(my_dict):
+#    count=[]
+#    for _,y in my_dict.items():
+#        for z in my_dict:
+#            if z == y:
+#            #    my_dict.keys()
+#                count.append(y)
+
+#    return count
+
+#    return [i for i in my_dict.keys() if i in my_dict.values()]
+#print(common_elements(my_dict))
+
+#a={"B":11,"Z":12,"E":13}
+#print(sorted(a)) # show key vale sorted in LIST ['B', 'E', 'Z']
+
+#wheel_count={
+#    "truck":2,
+#    "car":4,
+#    "bus":8
+#}
+
+#for vichle,count in sorted(wheel_count.items()):
+#    print(f"{vichle}is {count}")
+
+#wheel_count=[
+#    {"name":"purshottam","sectiion":400,"price piad":200},
+#    {"name":"tyagi","sectiion":100,"price piad":400},
+#    {"name":"bhola","sectiion":600,"price piad":0}
+#]
+
+#for attend in wheel_count:
+#    for i,y in attend.items():
+#        print(f"The {i} is {y}")
+
+# Assign a list of four dictionaries to a "complexity" variable below
+#complexity=[
+#    {1:"A",2:"B"},
+#    {3:"C",4:"D"},
+#    {5:"E",6:"F"},
+#    {7:"G",8:"H"}
+#]
+
+# The first and third dictionaries should have two key-value pairs
+# For those dictionaries, the keys should be strings and the values should be Booleans
+
+# The second and fourth dictionaries should have three key-value pairs
+# For those dictionaries, the keys shoulds be floats and the values should be list of strings. 
+# The lists can be of any length.
+
+#complexity=[
+#    {"ABC":True,"DEF":False},
+#    {2.1:"HELLO",2.2:"HELLO1",2.3:"HELLO3"},
+#    {"GHI":True,"IJKL":False},
+#    {3.1:"HELLO",3.2:"HELLO1",3.3:"HELLO2"}
+#]
+
+#def collect_data(**ram):
+#    print(ram)
+
+#collect_data(a=1,b=2,c=3)#{'a': 1, 'b': 2, 'c': 3}
+
+#def sum_of_args(a,b,*args,**kargs):
+#    print(f"The total of yours sum of argument and b is {a+b}")
+#    print(f"Th sun od remainng argument {sum(args)}")
+#    print(kargs)
+
+#    dic_total=0
+#    for vaules in kargs.values():
+#        dic_total +=vaules
+#    print(f"Th sum ofdic argument {dic_total}")    
+#sum_of_args(2,3,4,5,6,7,8,9,x=9,y=10)
+
+#def height_to_meter(feet,inches):
+#    total_inches=(feet * 12) + inches
+#    return total_inches * 0.0254
+
+#print(height_to_meter(5,11))
+
+#stats={
+#    "feet": 5,
+#    "inches": 11
+#}
+#print(type(stats))
+#if type(stats) == <class 'dict'>:
+#    print("Hi")
+#print(height_to_meter(**stats))
+
+
+
+# Declare a plenty_of_arguments function that accepts two parameters (a and b)
+# and an additional **kwargs parameter.
+#
+# The function should return True if the sum of a, b, and the values of 
+# **kwargs is greater than 100. It should return False otherwise.
+#
+# EXAMPLES:
+# plenty_of_arguments(20, 30)                          => False
+# plenty_of_arguments(a = 50, b = 75)                  => True
+# plenty_of_arguments(a = 50, b = 25, c = 50)          => True
+# plenty_of_arguments(a = 25, b = 25, c = 25, d = 25)  => False
+# plenty_of_arguments(a = 25, b = 25, c = 25, d = 26)  => True
+
+
+#def plenty_of_arguments(a,b,**awarks):
+#    return  (a+b + sum(awarks.values())) > 100
+
+
+#print(plenty_of_arguments(50,25,c=50))
+
+#language=["python","java","c"]
+
+#lenght={i:len(i) for i in language}
+#print(lenght)
+
+#lenght={i:len(i) for i in language if "t" in i}
+#print(lenght)
+
+
+#lenght={i:language.count(i) for i in language if i > "j"}
+#print(lenght)
+
+# You are writing a Python program to model a remote control
+# for a television set. Declare a stations_to_numbers
+# function that accepts a dictionary. The keys will be
+# channel numbers and the values will be the station names.
+# For example...
+#channels = {
+#   2: "CBS",
+#   4: "NBC",
+#   5: "FOX",
+#   7: "ABC"
+#}
+# The stations_to_numbers function should return an
+# inverted dictionary where the keys are the station names
+# and the values are the channel numbers
+#
+# stations_to_numbers(channels) => {'CBS': 2, 'NBC': 4, 'FOX': 5, 'ABC': 7}
+
+#def stations_to_numbers(channels):
+#    return {y:i  for i,y in channels.items()}
+
+
+#print(stations_to_numbers(channels))
+
+
+# Declare a coaster_conversion function that accepts a dictionary
+# The keys of the dictionary will be strings representing roller coasters
+# The values will be the heights of each coaster in meters
+#
+# Return a new dictionary with the same keys.
+# The values should be the heights converted from meters to feet,
+# The final values (in feet) should also be rounded to the closest integer
+# HINT: 1 meter is equal to 3.28084 feet
+# HINT: The round function rounds a number to the nearest integer
+#
+#coasters = {
+#   "Kingda Ka": 139,
+#   "Top Thrill Dragster": 130,
+#   "Superman: Escape From Krypton": 126
+#}
+#
+# coaster_conversion(coasters) => {'Kingda Ka': 456, 'Top Thrill Dragster': 426, 'Superman: Escape From Krypton': 413}
+
+#def coaster_conversion(coasters):
+#    return {i:round(y*3.28084) for i,y in coasters.items()}    
+
+
+#print(coaster_conversion(coasters))
+
+#NOTE-Set: A mutable,unorderd data structure that prohibits dublicate values
+
+#a={"a","b","c","a","b"}
+#print(a)
+
+# Declare a set with 3 of your favorite movies as strings.
+# Assign it to a movies variable.
+
+
+# Declare a set with the first four months of the year as strings.
+# Assign it to a months variable.
+# Make sure the first letter of each month is capitalized.
+#months={"Jan","Feb","March","April"}
+
+# Create an empty set and assign it to an empty variable.
+#empty=set{}
+
+# Define a remove_duplicates function that accepts a single list as an argument. 
+# The function should return a list with all of the duplicates from the original list removed. 
+# The order of elements in the returned list is irrelevant.
+#
+# EXAMPLES:
+# remove_duplicates([1, 2, 1, 2])  => [1, 2] or [2, 1]
+# remove_duplicates([1, 2, 3, 4])  => [1, 2, 3, 4] in some order
+
+#def remove_duplicates(lists):
+#    return list(set(lists))
+
+#print(remove_duplicates([1, 2, 3, 4]))
+
+
+#alpha={"A","B","C","D"}
+#alpha.add("E")
+#print(alpha)
+#alpha.update("F","G")
+#print(alpha)
+#alpha.update("A","H","I")
+#print(alpha)
+
+#alpha.remove("B")
+#alpha.discard("A")
+#print(alpha.remove("B"))
+
+
+#A={"A","B","C"}
+#B={"D","B","E"}
+##print(A.intersection(B))#commona both in Aand B that is {'B'}
+##print(A.union(B)) #{'E', 'D', 'B', 'C', 'A'}
+#print(A.difference(B)) #{'A', 'C'}
+#print(A-B)#{'A', 'C'}
+#print(A.symmetric_difference(B))#{'E', 'C', 'A', 'D'}
+#print(A ^ B)# same as above {'E', 'C', 'A', 'D'}
+
+
+#juice_flavors = { "Lemon", "Peach", "Raspberry", "Apple" }
+#tea_flavors = { "Peach", "Grape", "apple" }
+     
+#print(juice_flavors & tea_flavors)
+
+
+#print(juice_flavors | tea_flavors)
+
+#juice_flavors = { "Lemon", "Peach", "Raspberry", "Apple" }
+#tea_flavors = { "Peach", "Grape", "apple" }
+##print(juice_flavors - tea_flavors)
+#
+#import this
+
+###NOTE- Open a file
+#with open("center.sh","r") as aws_file:
+#    print("This file open a file")
+#    print(aws_file.read())
+
+#print("Close this file")
+
+#with open("center.sh","r") as aws_file:
+#    for line in aws_file:
+#        print(line)
+
+#with open("ram.txt","w") as ram_file:
+#    ram_file.write("Hello file\n")
+#    ram_file.write("Really it funny\n")
+
+
+#with open("ram.txt","a") as ram_file:
+#    ram_file.write("Hello file\n")
+#    ram_file.write("Really it funny\n")
+
+#NOTE- higher order function or Decorators
+#higher order function: a function that either accepts a function as an agrument or returns a function as a return
+
+# Define an invoke_thrice function.
+# It should accept a single argument (which will be a function)
+# In its body, the invoke_thrice function should invoke
+# the function that's passed in exactly three times.
+
+#def convert_gallon_to_cups(gallons):
+#    def gallon_to_quators(gallons):
+#        print(f"converting gallon {gallons} to quator")
+#        return gallons * 4
+#    
+#    def quarts_to_pints(quarts):
+#        print(f"converting quarts {quarts} to pints")
+#        return quarts * 2
+    
+#    def pints_cups(pints):
+#        print(f"converting pints {pints} to cups")
+#        return pints*2
+    
+#    quarts=gallon_to_quators(gallons)
+#    pints=quarts_to_pints(quarts)
+#    cups=pints_cups(pints)
+
+#    return cups
+
+#print(convert_gallon_to_cups(10))
+
+
+#def calculator(operatars):
+#    def add(a,b):
+#        return a + b
+
+#    def sub(a,b):
+#        return a- b 
+
+#    if operatars == "add":
+#        return add
+#    else:
+#        return sub
+
+#print(calculator("add")(10,12))
+
+#age=20
+#def fancy_func():
+#    age=100
+#    print(age)
+
+#fancy_func()
+#print(age)
+#NOTE-shadow variable  a local varianble that share the same name as a global variable
+#NOTE-Constant A name for a vaule that does not change over program execution
+
+
+#def outer():
+#    def inner():
+#        return len
+#    return inner()
+
+#print(outer()#<built-in function len>
+#print(outer()("purshottam"))#10
+
+#NOTE- Closure:-A programming pattern in which  a scope retains access to an enclosing scope name
+#NOTE-Scope II: The LEGB Rule
+#Local,Enclosing functions,Global,Built-in keywords
+
+
+
+# Define a global "a" variable assigned to the value 1
+#a=1
+
+# Declare a "modify_a" function that accepts a single argument.
+# It should overwrite the value of the a global variable with the argument
+
+#def modify_a(value):
+#    global a
+#    a=value
+
+#print(a)
+#print(modify_a(5))
+#print(a)
+
+
+#NOTE- Object oreinted programing
+
+#class purshottam():
+#    pass
+
+#tyagi= purshottam()
+#print(tyagi) #<__main__.purshottam object at 0x7f72b22e36d8>
+
+#class purshottam():
+#    print("tyagi")
+
+#tyagi = purshottam()
+#print(tyagi)
+
+
+# Declare a Country class with an empty body.
+# Instantiate an object from the class and assign it to an “america" variable.
+# Instantiate another object from the class and assign it to a “canada” variable.
+# Instantiate a third object from the class and assign it to a “mexico” variable.
+
+#class Country():
+#    pass
+
+#america=Country()
+#canada=Country()
+#mexico=Country()
+
+#__init__ = know as dander init
+
+#class Guitur():
+#    def __init__(self):
+#        print(f"hi {self}")
+
+
+#ram=Guitur()
+#print(ram)
+#ram.wood="hahahha"
+#ram.height=6
+#print(ram.wood)
+#print(ram.height)
+
+
+#sham= Guitur()
+#print(sham)
+#Attribute: A piece of adata store on an object 
+
+
+#class Guitar():
+#    def __init__(self,wood):
+#        self.wood= wood
+
+#ram=Guitar("raja")
+#sham=Guitar("ram")
+#sita=Guitar()
+#print(ram.wood)
+#print(sham.wood)
+#print(sham.wood)#TypeError: __init__() missing 1 required positional argument: 'wood'
+
+
+# Declare a Musical class that accepts a name parameter. 
+# In the initialization process for an object, assign the
+# name parameter to a name attribute on the object.
+#
+# Instantiate a Musical object with the name “Rent” 
+# and assign it to an “rent" variable.
+#
+# Instantiate a second Musical object with the name “Book of Mormon" 
+# and assign it to a “mormon” variable.
+#
+# Instantiate a third object from the class with the name “Chicago" 
+# and assign it to a “chicago” variable.
+
+#class Musical():
+#    def __init__(self,name):
+#        self.name = name
+
+
+#rent=Musical("Rent")
+#print(rent.name)
+
+#mormon=Musical("Book of Mormon")
+#print(mormon.name)
+
+#chicago=Musical(name="Chicago")
+#print(chicago.name)
+
+#class Shape():
+#    def __init__(self,sides):
+#        self.sides=sides
+        
+#traingle=Shape(3)
+#print(traingle.sides)
+
+#square=Shape(4)
+#print(square.sides)
+
+#decagon=Shape(10)
+#print(decagon.sides)
+
+
+#class Skyscraper():
+#    def __init__(self, name,year):
+#        self.name=name
+#        self.year=year
+
+#empire=Skyscraper("Empire State Building",1931)
+#print(empire.name,empire.year)
+
+#wtc=Skyscraper("One World Trade Center",2014)
+#print(wtc.name,wtc.year)
+
+
+
+#21661677
+#60577
+#6183
+#MP
+
+# Declare a Zombie class that accepts health and brains_eaten parameters. 
+
+# In the initialization process for a Zombie object, assign the 
+# two parameters to two attributes with the same name.
+#
+# If the instantiation does not pass a health parameter, 
+# it should be assigned a default value of 100.
+#
+# If the instantiation does not pass a brains_eaten parameter, 
+# it should be assigned a default value of 5.
+
+# Instantiate a Zombie object with 80 health and 5 brains eaten. 
+# Assign it to a “bob” variable.
+#
+# Instantiate a Zombie object with 120 health and 3 brains eaten.
+# Assign it to a “sally” variable.
+#
+# Instantiate a Zombie object with no custom parameters.
+# Assign it to a “benjamin” variable.
+#
+# Practice instantiating the objects with both positional and keyword arguments.
+
+#class Zombie():
+#    def __init__(self,health=100,brains_eaten=5):
+#        self.health=health
+#        self.brains_eaten=brains_eaten
+
+#bob=Zombie(80,5)
+#print(bob.health,bob.brains_eaten)
+
+#sally=Zombie(120,3)
+#print(sally.health,sally.brains_eaten)
+
+#benjamin=Zombie()
+#print(benjamin.health,benjamin.brains_eaten)
+
+#NOTE-Instance Method:A function that belong to an object
+
+#class Pokimon():
+#    def __init__(self,name,specailty,health=100):
+#        self.name=name
+#        self.specailty=specailty
+#        self.health=health
+
+#    def roar(self):
+#        print("hoohii")
+
+#    def describe(self):
+#        print(f"i am {self.name} with {self.specailty} power with {self.health} health")
+    
+#    def take_damage(self,amount):
+#        self.health -=amount
+
+#squirtle=Pokimon("Squrite","water")
+#charmander=Pokimon(name="Charmander",specailty="Fire",health=110)
+
+#squirtle.roar()
+#squirtle.describe()
+#charmander.describe()
+#squirtle.take_damage(20)
+#print(squirtle.health)
+#squirtle.health=60
+#print(squirtle.health)
+
+
+
+# Declare a Musician class that accepts age and income parameters. 
+
+# In the instantiation process for an object, assign the two parameters
+# to two attributes with the same name.
+
+# Declare an enter_club instance method. 
+# If the musician is less than 21 years old, the method should 
+# return the string "Access denied!”. 
+# If the musician is 21 or older, the method should
+# return the string "Access granted!".
+
+# Declare a play_show instance method. The method should
+# increment the musician’s income by 5.
+
+# EXAMPLES
+#
+#class Musician():
+#    def __init__(self,age=21,income=5):
+#        self.age=age
+#        self.income=income
+
+#    def enter_club(self):
+#        if self.age < 21:
+#            return ("Access denied!")
+#        else:
+#            return ("Access granted")
+
+#    def play_show(self):
+#        self.income += 5
+
+#cliff = Musician(age = 27, income = 0)
+#print(cliff.age)    # 27
+#print(cliff.enter_club())  # "Access granted!"
+#print(cliff.income) # 0
+#cliff.play_show()
+#print(cliff.income) # 5
+#cliff.play_show()
+#print(cliff.income) # 10
+
+
+#class SmartPhone():
+#    def __init__(self):
+#        self._company="Apple" ####NOTE- _ means projected in class please dont cahnge it
+#        self._fireware=10.0
+
+#    def get_os_version(self):
+#        return self._fireware
+
+#    def update_os(self):
+#        print("OS is updated")
+#        self._fireware +=1
+
+#iphone=SmartPhone()
+#print(iphone._company)
+#print(iphone._fireware)
+
+#print(iphone.update_os())
+#print(iphone._fireware)
+
+#class Book():
+#    def __init__(self,author,publisher,page_count):
+#        self._author=author
+#        self._publisher=publisher
+#        self.page_count=page_count
+
+#    def copyright(self):
+#        return f"Copyriht {self._author}, {self._publisher}"
+
+
+#    def rip_in_half(self):
+#        if self.page_count <= 1:
+#            self.page_count = 0
+#        else:
+#            self.page_count = self.page_count/2
+
+
+#book = Book(author = "Grant Cardone", publisher = "10X Enterprises", page_count = 10)
+    
+#print(book.copyright()) # Copyright Grant Cardone, 10X Enterprises
+#print(book.page_count) # 10
+#book.rip_in_half()
+#print(book.page_count) # 5.0
+#book.rip_in_half()
+#print(book.page_count) # 2.5
+#book.rip_in_half()
+#print(book.page_count) # 1.25
+#book.rip_in_half()
+#print(book.page_count) # 0.625
+#book.rip_in_half()
+#print(book.page_count) # 0
+#book.rip_in_half()
+#print(book.page_count) # 0
+
+#NOTE- Getters and Setters: instance methods that get/set attribute vaules on an object
+
+#class Height():
+#    def __init__(self,feet):
+#        self._inches = feet * 12
+
+#    def __get__feet(self):
+#        return self._inches /12
+
+#    def __set__feet(self,feet):
+#        if feet >=0:
+#            self._inches = feet * 12
+
+#    feet=property(__get__feet,__set__feet)
+
+#h=Height(6)
+
+#print(h.feet)
+
+#h.feet=10
+#print(h.feet)
+
+
+
+
+#class Currency():
+#    def __init__(self,dollar):
+#        self._cents= dollar * 100
+
+#    @property
+#    def dollar(self):
+#        return self._cents / 100
+
+#    @dollar.setter
+#    def dollar(self,dollar):
+#        if dollar >= 0:
+#            self._cents= dollar * 100
+
+#a=Currency(10)
+#print(a.dollar)
+#a.dollar= 100
+#print(a.dollar)
+#print(a._cents)
+
+# Declare a PizzaPie class that accepts a total_slices parameter. 
+# In the instantiation process for an object, assign the parameter to an 
+# attribute with the same name. 
+
+# A PizzaPie object should also be initialized with a _slices_eaten 
+# protected attribute set to 0.
+
+# Define a slices_eaten property. 
+# The getter method should retrieve the value of the _slices_eaten attribute. 
+# The setter method should set a new value for the _slices_eaten attribute
+# but only if the argument is less than total_slices.
+
+# Define a percentage property that calculates how much of the pie has been eaten 
+# (the number of slices eaten divided by the total slices available). 
+# The percentage property should be read-only.
+
+# See sample execution below
+
+#class  PizzaPie():
+#    def __init__(self,total_slices):
+#        self.total_slices = total_slices
+#        self._slices_eaten=0
+
+#    @property
+#    def slices_eaten(self):
+#        return self._slices_eaten
+
+
+#    @slices_eaten.setter
+#    def slcies_eaten(self,slices_eaten):
+#        if slices_eaten <= self.total_slices:
+#            self._slices_eaten = slices_eaten
+
+#    @property
+#    def percentage(self):
+#        return self._slices_eaten / self.total_slices
+
+
+#cheese = PizzaPie(8)
+#cheese.slices_eaten = 2
+#print(cheese.percentage) # 0.25
+#
+#cheese.slices_eaten = 4
+#print(cheese.percentage) # 0.5
+#cheese.slices_eaten = 10 # _slices_eaten should not change because there's only 8 slices in pie
+#print(cheese.percentage) # 0.5
+
+# ERROR - AttributeError: can't set attribute
+#cheese.percentage = 0.50
+
+from os import name
+
+
+stas={
+    "name":"BBQ Chicken",
+    "price":19.99,
+    "size":"Extra Large",
+    "ingre":["chicken","oninon"]
+}
+
+class Pizza():
+    def __init__(self,stats):
+        for key,values in stas.items():
+            setattr(self,key,values)
+
+
+#bbq=Pizza(stas)
+#print(bbq.size)
+#print(bbq.name)
+#
+#getattr  
+#for i in ["name","price","tyagi"]:
+#    print(getattr(bbq,i,"hahaha"))# if tyagi is not found then it pront "hahahha"
+
+#NOTE-hasattr means attr present or not
+#NOTE-delattr means delete attr
+
+#stas_delete=["size","tyagi","ram","ingre"]
+
+#print(bbq.size)
+#for i in stas_delete:
+#        if hasattr(bbq,i):
+#            delattr(bbq,i)
+
+#print(bbq.size)
+
+#class SushiPlatter():
+#    def __init__(self, salmon, tuna, shrimp, squid):
+#        self.salmon=salmon
+#        self.tuna=tuna
+#        self.shrimp=shrimp
+#        self.squid=squid
+
+#    @classmethod
+#    def lunch_specail_A(cls):
+#        return cls(salmon=2,tuna=2,shrimp=1,squid=0)
+    
+
+#boris=SushiPlatter(salmon=5,tuna=4,shrimp=2,squid=10)
+#print(boris.tuna)
+
+#my_lunch=SushiPlatter.lunch_specail_A()
+#print(my_lunch.tuna)
+
+
+
+# Define a Chocolate class that accepts and assigns a cacao_content attribute.
+
+# Define a "sweet" class method that returns a 
+# Chocolate object with a cacao_content value of 30.
+
+# Define a "semisweet" class method that returns a 
+# Chocolate object with a cacao_content value of 50.
+
+# Define a "bittersweet" class method that returns a 
+# Chocolate object with a cacao_content value of 70.
+
+# Define a "bitter" class method that returns a 
+# Chocolate object with a cacao_content value of 99.
+
+#class Chocolate():
+#    def __init__(self,caco_content):
+#        self.caco_content = caco_content
+
+#    @classmethod
+#    def sweet(cls):
+#        return cls(30)
+
+#    @classmethod
+#    def semisweet(cls):
+#        return cls(50)
+
+#    @classmethod
+#    def bittersweet(cls):
+#        return cls(70)
+
+#    @classmethod
+#    def bitter(cls):
+#        return cls(90)
+
+#mylunch=Chocolate.bitter()
+#print(mylunch.caco_content)
+
+#class Counter():
+#    count=0
+
+#    def __init__(self):
+#        Counter.count +=1
+
+#    @classmethod
+#    def create_two(cls):
+#        two_counters = [cls(),cls()]
+#        print(f"New number of counetr object is {cls.count}")
+#        return two_counters
+
+#print(Counter.count)
+#c1=Counter()
+#print(Counter.count)
+#c2,c3=Counter.create_two()
+#print(Counter.count)
+
+#print(c1.count)
+#print(c2.count)
+#print(c3.count)
+
+#NOTE-magic Methods
+#print(3.3+4.0)
+#print(3.3.__add__(4.0))
+
+#print(len([1,2,3]))
+#print([1,2,3].__len__())
+
+#print("h" in "hello")
+#print("hello".__contains__("h"))
+
+#print(["a","b","c"][2])
+#print(["a","b","c"].__getitem__(2))
+
+
+#class Card():
+#    def __init__(self,rank,suit):
+#        self.rank=rank
+#        self.suit=suit
+
+#    def __str__(self):
+#        return f"{self.rank} of {self.suit}"
+
+#    def __repr__(self):
+#        return f'Card(" {self.rank}")'
+
+#c=Card("Ace","Spades")
+#print(c)
+#print(str(c))
+#print(repr(c))
+
+#class Students():
+#    def __init__(self,math,history,writing):
+#        self.math=math
+#        self.history=history
+#        self.writing = writing
+
+
+#    @property
+#    def grades(self):
+#        return self.math+self.history+self.writing
+
+#    def __eq__(self,other_students):
+#        return self.grades == other_students.grades
+
+
+#bob=Students(math=90,history=90,writing=90)
+#more=Students(math=100,history=90,writing=80)
+#joe=Students(math=50,history=50,writing=50)
+
+
+#print(bob.grades)
+#print(more.grades)
+
+#print(bob == more)
+#print(more  == joe)
+
+
+# Part A: Instantiation
+
+# Define a BusTrip class that is initialized with a destination, 
+# a bus company, and a price for the trip. 
+# Preserve the arguments as attributes on the object.
+# The choice of whether to use protected attributes is up to you.
+
+#class BusTrip():
+#    def __init__(self,destination,company,price):
+#        self.destination=destination
+#        self.company=company
+#        self.price=price
+
+# Part B: String Representation
+#    def __str__(self):
+#        return f"You paid is {self.price} to {self.company} to go {self.destination}"
+# The string representation of a BusTrip object must be a string in the form of:
+#    "You paid 24.99 to Greyhound to go to Boston.""
+# In this example, “Boston” is the destination, “Greyhound” is the bus company, and 24.99 is the price.
+# These are all fed in as arguments when a BusTrip object is initialized.
+
+# Part C: Equality
+
+# Implement equality logic between two different BusTrip objects.
+# Two BusTrips object are considered equal if:
+#   -- they have the same destination
+#   -- their price is within 3 dollars of each other
+# HINT: Use Python’s abs function to calculate the absolute value of a number.
+#    def __eq__(self,other_trip):
+#        a= self.destination == other_trip.destination
+#        b= abs(self.price - other_trip.price) <=3
+#        return a and b
+
+# Sample Execution
+#boston1 = BusTrip(destination = "Boston", company = "Greyhound", price = 24.99)
+#boston2 = BusTrip(destination = "Boston", company = "Megabus", price = 22.99)
+#boston3 = BusTrip(destination = "Boston", company = "Megabus", price = 49.99)
+#philly  = BusTrip(destination = "Philadelphia", company = "Peter Pan", price = 12.99)
+
+#print(boston1)            # You paid 24.99 to Greyhound to go to Boston.
+#print(boston1 == philly)  # False - different destinations
+#print(boston1 == boston2) # True - same destination and insignificant price difference
+#print(boston1 == boston3) # False - large price difference
+
+#NOTE- Docstring : A regular python string that create technical documents for a peice of you program
+
+#"""
+#a module use in class for string
+#"""
+
+#def fish():
+#    """
+#    heloo
+#    """
+#    return True
+
+#class Slamon():
+#    """
+#    blue print for semon object
+#    """
+#    def __init__(self):
+#        self.tatynesss=1
+
+#    def bake(self):
+#        """
+#        llllllll
+#        """
+#        self.tatynesss +=1
+
+#print(Slamon.__doc__)
+#help(Slamon)
+
+
+
+# Define a CollegeStudent class that accepts and assigns a university attribute.
+# Add a docstring for the class equal to "Blueprint for a student at an institution of higher learning"
+# Define three instance methods — sleep, eat, and party. 
+# The actual content of the methods is irrelevant (feel free to use the pass keyword)
+#class CollegeStudent():
+#    """Blueprint for a student at an institution of higher learning"""
+#    def __init__(self,university):
+#        self.university=university
+
+# The sleep method should have the docstring "Sleep through class".
+# The eat method should have the docstring "Go to the cafeteria".
+# The party method should have the docstring "Hit the books hard".
+#    def sleep(self):
+#        """
+#        Sleep thought class
+#        """
+#        pass
+#    def eat(self):
+#        """
+#        Go to cafteria
+#        """
+#        pass
+#    def party(self):
+#        """
+#        Hit the book hard
+#        """
+#        pass
+# To simplify the test evaluation, submit ALL docstrings without any line breaks.
+# Example: """Sample docstring"""
+# You're welcome to use single quotes, double quotes, or triple quotes.
+
+# See sample execution below
+
+#print(CollegeStudent.__doc__) # Blueprint for a student at an institution of higher learning
+
+#marty = CollegeStudent("Python Community College") 
+#print(marty.sleep.__doc__) # Sleep through class
+#print(marty.eat.__doc__)   # Go to the cafeteria
+#print(marty.party.__doc__) # Hit the books hard
+
+
+#NOTE- __bool__ tander bool
+
+#class Emotion():
+#    def __init__(self,positivity,negativity):
+#        self.positivity= positivity
+#        self.negativity=negativity
+
+#    def __bool__(self):
+#        return self.positivity > self.negativity
+
+
+#my_emotion=Emotion(positivity=50,negativity=75)
+
+#if my_emotion:
+#    print("This never print it alway return fasle dur to bool")
+
+#my_emotion.positivity=100
+
+#if my_emotion:
+#    print("this is happen bool is true")
+
+#NOTE- namedtuple
+
+#import collections
+
+#Book= collections.namedtuple("Book",["title","author"])
+
+#animal_form=Book("ram","sham")
+#getby=Book(title="purshottam",author="tyagi")
+
+#print(animal_form[0])
+#print(getby[1])
+
+
+#NOTE-  __getitem __setitem
+
+#class CrayonBox():
+#        def __init__(self):
+#            self.crayon=[]
+
+#        def add(self,crayon):
+#            self.crayon.append(crayon)
+
+#        def __getitem__(self,index):
+#            return self.crayon[index]
+
+#        def __setitem__(self,index,value):
+#            self.crayon[index] = value
+
+
+#cb=CrayonBox()
+#cb.add("blue")
+#cb.add("red")
+#print(cb[0])
+
+
+# Define a Car class that accepts a maker (string), model (string),
+# and year (number) parameters and assigns them to respective
+# attributes
+#class Car():
+#    def __init__(self,maker,model,year):
+#        self.maker=maker
+#        self.model=model
+#        self.year=year
+
+#class Dealership():
+#    def __init__(self):
+#        self.cars=[]
+
+#    def accept_delivery(self,car):
+#        return self.cars.append(car)
+
+
+#    def __getitem__(self,index):
+#        return self.cars[index]
+
+#    def __setitem__(self,index,value):
+#        self.cars[index]=value
+
+# Define a Dealership class. Each Dealership object should instantiate
+# with a "cars" attribute set to an empty list.
+
+# A Dealership object should have a accept_delivery instance method
+# that accepts a Car object and adds it to the Dealership's internal
+# "cars" list
+
+# Indexing into a Dealership with a number should access a specific
+# Car object in the Dealership.
+
+# An index position in a Dealership should also be overwriteable
+# with a new Car object (see examples below)
+
+#f150 = Car(maker = "Ford", model = "F-150", year = 2019)
+#camry = Car(maker = "Toyota", model = "Camry", year = 2020)
+#porsche = Car (maker = "Porsche", model = "911 Carrera", year = 2021)
+
+#dealership = Dealership()
+
+#dealership.accept_delivery(f150)
+#dealership.accept_delivery(camry)
+
+#print(dealership[0].year) # 2019 -- the F150's year
+
+#dealership[0] = porsche
+
+#for car in dealership:
+#  print(car.maker) # Porsche, Toyota
+
+
+#class Garbage():
+#    def __del__(self):
+#        print("Hello")
+
+#g=Garbage()
+#g=[1,2,3]
+#print(g)
+
+
+#NOTE-      Inheritance
+#inheritnace is a design pattern in which a class inherit(or recive) attributes and methods from one or more other classes
+#Inheritance helps to organise releated classes and reduce duplication
+#techinal term
+#the class being inherited form is called the parent,superclass or base class
+#The class that inherited is called the child,subclassor derived class
+
+#class Store():
+#    def __init__(self):
+#        self.owner="tyagi"
+    
+#    def exclaims(self):
+#        return "Lots of stuff"
+
+#class Coffestore(Store):
+#    pass
+
+#starbucks=Coffestore()
+
+#print(starbucks.owner)
+#print(starbucks.exclaims())
+
+#class Employee():
+#    def do_work(self):
+#        print("I am working")
+
+#class Manager(Employee):
+#    def waste_time(self):
+#        print("Youtube video is FUN")
+
+
+#e=Employee()
+#m=Manager()
+#
+#e.do_work()
+#e.waste_time()#error kyu ki out of range  baat hai is ki
+#m.waste_time()
+#m.do_work()
+
+
+
+# Define a Clothing superclass with wear and sell instance methods.
+# The wear method should return the string “I'm wearing this fashionable piece of clothing!”
+# The sell method should return the string “Buy my piece of clothing!”
+
+# Define a Socks subclass that inherits from the Clothing superclass.
+# It should define a lose_one instance method that 
+# returns the string “Where did my other one go?”
+# It should override the wear method to 
+# return the string “Take a look at my socks! They're gorgeous!”
+# It should override the sell method to 
+# return the string “Buy my socks!”
+#class Clothing():
+#    def wear(self):
+#        return "I'm wearing this fashionable piece of clothing!"
+    
+#    def sell(self):
+#        return "Buy my piece of clothing!"
+
+#class Stocks(Clothing):
+#    def lose_one(self):
+#        return "Where did my other one go?"
+
+#    def wear(self):
+#        return "Take a look at my socks! They're gorgeous!"
+
+#    def sell(self):
+#        return "Buy my socks!"
+
+#class Animal():
+#    def __init__(self,name):
+#        self.name=name
+
+#    def eat(self,food):
+#        return f"{self.name} is enjoying the {food}"
+
+#class Dog(Animal):
+#    def __init__(self,name,breed):
+#        super().__init__(name)
+#        self.breed=breed
+
+
+#waston=Dog("Waston","kalo kaliya")
+#print(waston.name)
+#print(waston.breed)
+
+
+#class Musician():
+#    def __init__(self,name):
+#        self.name=name
+#        self.albums=[]
+       
+#    def release_album(self,title):
+#        return self.albums.append(title)
+        
+#class Drummer(Musician):
+#    def __init__(self,name,stamina):
+#        super().__init__(name)
+#        self.stamina=stamina
+
+
+# EXAMPLE:
+#lars = Drummer(name = "Lars", stamina = 2)
+#print(lars.name)   # "Lars"
+#print(lars.stamina) # 2
+#print(lars.albums) # []
+#
+#lars.release_album("Ride the Lightning")
+#print(lars.albums) # ["Ride the Lightning"]
+#
+#lars.release_album("Master of Puppets")
+#print(lars.albums)  # ["Ride the Lightning", 'Master of Puppets']
+
+
+#import random
+
+#class Player():
+#    def __init__(self,game_played,victories):
+#        self.game_played=game_played
+#        self.victories=victories
+
+#    @property
+#    def win_ration(self):
+#        return self.victories / self.game_played
+
+#class HumanPlayer(Player):
+#    def make_move(self):
+#        print("Let player make a decsion")
+
+#class ComputerPlayer(Player):
+#    def make_move(self):
+#        print("Let computer make a decesion")
+
+
+#hp=HumanPlayer(game_played=30,victories=15)
+#cp=ComputerPlayer(game_played=1000,victories=999) 
+#print(hp.win_ration)
+#print(cp.win_ration) 
+
+#game_players=[hp,cp]
+#starting_palyer=random.choice(game_players)
+#starting_palyer.make_move()
+
+
+# In this exercise, we'll be modelling a routine for proper dental health,
+# which includes brushing our teeth, flossing, and using mouthwash.
+# The order of these three varies from person to person.
+# Declare a DentalHealthItem class. Its initialization should set a "price"
+# attribute.
+#class DentalHealthItem():
+#    def __init__(self,price):
+#        self.price=price
+
+# Declare a Toothbrush subclass that inherits from DentalHealthItem.
+# On it, define a "use" instance method that returns "Brushing the teeth"
+#class Toothbrush(DentalHealthItem):
+#    def use(self):
+#        return "Brushing the teeth"
+# Declare a Floss subclass that inherits from DentalHealthItem.
+# On it, define a "use" instance method that returns "Flossing the teeth"
+#class Floss(DentalHealthItem):
+#    def use(self):
+#        return "Flossing the teeth"
+# Declare a Mouthwash subclass that inherits from DentalHealthItem.
+# On it, define a "use" instance method that returns "Washing the teeth"
+#class Mouthwash(DentalHealthItem):
+#    def use(self):
+#        return "Washing the teeth"
+    
+# Instantiate an instance of a Toothbrush and assign it a "toothbrush" variable.
+# Instantiate an instance of a Floss and assign it a "floss" variable.
+# Instantiate an instance of a Mouthwash and assign it a "mouthwash" variable.
+#toothbrush=Toothbrush(price=4.99)
+#floss=Floss(price=1.99)
+#mouthwash=Mouthwash(price=7.99)
+
+
+# Declare a "dental_health_kit" variable. It should be a list that stores the three objects.
+#dental_health_kit=[toothbrush,floss,mouthwash]
+#random.choices(dental_health_kit) 
+# Import the "random" module (see last lesson for reference). 
+# Invoke the "shuffle" function from the module, passing in the dental_health_kit list. 
+# This will mutate the list, randomizing the order of its elements.
+
+# Use list comprehension to invoke the "use" method on all three objects in "dental_health_kit".
+# Assign the resulting list of strings to an "actions" variable.
+
+#actions=[i.use() for i in dental_health_kit]
+
+
+
+
+#class Nonesense():
+#    def __init__(self):
+#        self.__attribute="Hello"
+
+#    def __some_method(self):
+#        print("This is coming from some method")
+
+#class SpecialNonesense():
+#    pass
+
+#n=Nonesense()
+#sn=SpecialNonesense()
+
+#print(n._Nonesense__attribute)
+#print(n._Nonesense__some_method())
+#sn._Nonesense__some_method()
+
+class FrozenFood():
+    def thraw(self,min):
+        print(f"Thawing for {min} min")
+
+    def store(self):
+        print("This is FrozenClass")
+
+
+#class Dessert():
+#    def add_weight(self):
+#        print("Putting on Pound")
+
+#    def store(self):
+#        print("This is Dessert")
+
+#class IceCream(Dessert,FrozenFood):
+#    pass
+
+
+#ic=IceCream()
+#ic.add_weight()
+#ic.thraw(5)
+#ic.store()# jo phele hoga wo aayega
+
+#print(isinstance([],list))#True
+#print(isinstance(12,str))#False
+
+#def divider(n):
+#    try:
+#        return 5/n
+#    except:
+#        pass
+#        cla=5
+#    return cla
+#print(divider(0))
